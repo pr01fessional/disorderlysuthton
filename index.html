@@ -6,7 +6,13 @@
 
     <title>Disorderly Suthton | Official Wiki</title>
 
+    <!-- Roboto Condensed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -18,7 +24,7 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;
             color: white;
 
             background-image:
@@ -51,6 +57,7 @@
 
         .title {
             font-size: clamp(45px, 7vw, 90px);
+
             font-weight: 800;
 
             letter-spacing: 2px;
@@ -58,13 +65,16 @@
             margin: 0;
 
             text-shadow:
-                0 4px 20px rgba(0,0,0,0.8);
+                0 4px 20px rgba(0, 0, 0, 0.8);
         }
 
         .official {
             margin-top: 10px;
 
             font-size: 13px;
+
+            font-weight: 500;
+
             letter-spacing: 6px;
 
             opacity: 0.8;
@@ -75,9 +85,10 @@
 
             height: 1px;
 
-            background: rgba(255,255,255,0.65);
+            background: rgba(255, 255, 255, 0.65);
 
             margin-top: 40px;
+
             margin-bottom: 30px;
         }
 
@@ -85,6 +96,7 @@
             display: flex;
 
             justify-content: center;
+
             align-items: center;
 
             gap: 14px;
@@ -103,18 +115,23 @@
 
             text-decoration: none;
 
-            font-size: 13px;
-            font-weight: bold;
+            font-size: 14px;
+
+            font-weight: 700;
 
             letter-spacing: 2px;
 
-            border: 1px solid rgba(255,255,255,0.55);
+            border: 1px solid rgba(255, 255, 255, 0.55);
 
-            background: rgba(0,0,0,0.40);
+            background: rgba(0, 0, 0, 0.40);
 
             backdrop-filter: blur(6px);
 
-            transition: all 0.2s ease;
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
         .button:hover {
@@ -125,7 +142,7 @@
             transform: translateY(-3px);
 
             box-shadow:
-                0 8px 30px rgba(0,0,0,0.4);
+                0 8px 30px rgba(0, 0, 0, 0.4);
         }
 
         @media (max-width: 650px) {
@@ -144,6 +161,7 @@
                 grid-column: 1 / 3;
             }
         }
+
     </style>
 </head>
 
