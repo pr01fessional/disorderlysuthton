@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Disorderly Suthton - Official Wiki</title>
+  <title>Disorderly Suthton - Wiki</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Damion&family=Roboto+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -40,15 +40,27 @@
        TOP RIGHT LOGO
        ========================= */
 
-    .logo {
+    .logo-link {
       position: absolute;
 
       top: 28px;
       right: 32px;
 
+      display: block;
+
+      line-height: 0;
+    }
+
+    .logo {
       width: 135px;
 
       filter: drop-shadow(0 4px 10px rgba(0,0,0,0.7));
+
+      transition: opacity 0.2s ease;
+    }
+
+    .logo-link:hover .logo {
+      opacity: 0.65;
     }
 
 
@@ -247,11 +259,11 @@
     .discord {
       position: fixed;
 
-      right: 25px;
-      bottom: 22px;
+      right: 22px;
+      bottom: 18px;
 
-      height: 34px;
-      padding: 0 16px;
+      height: 29px;
+      padding: 0 12px;
 
       display: flex;
       align-items: center;
@@ -259,17 +271,17 @@
 
       font-family: "Roboto Condensed", sans-serif;
 
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 800;
 
-      letter-spacing: 1.5px;
+      letter-spacing: 1.3px;
 
       color: white;
       text-decoration: none;
 
       border: 1px solid rgba(255,255,255,0.5);
 
-      border-radius: 8px;
+      border-radius: 7px;
 
       background: rgba(0,0,0,0.38);
 
@@ -302,11 +314,13 @@
 
     @media (max-width: 800px) {
 
-      .logo {
-        width: 105px;
-
+      .logo-link {
         top: 20px;
         right: 20px;
+      }
+
+      .logo {
+        width: 105px;
       }
 
       .page {
@@ -358,12 +372,19 @@
 
 <body>
 
-  <!-- Game Logo -->
-  <img
-    class="logo"
-    src="ds_logo.png"
-    alt="Disorderly Suthton Logo"
+  <!-- Clickable Game Logo -->
+  <a
+    class="logo-link"
+    href="https://www.roblox.com/games/121760921831203"
+    target="_blank"
+    rel="noopener noreferrer"
   >
+    <img
+      class="logo"
+      src="ds_logo.png"
+      alt="Disorderly Suthton Logo"
+    >
+  </a>
 
 
   <!-- Main Content -->
@@ -374,7 +395,7 @@
     </h1>
 
     <div class="official">
-      Official Wiki
+      - Official Wiki -
     </div>
 
     <div class="line"></div>
