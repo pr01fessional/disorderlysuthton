@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Disorderly Suthton | Official Wiki</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.50),
+                    rgba(0, 0, 0, 0.50)
+                ),
+                url("thumbnail1.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            min-height: 100vh;
+        }
+
+        .page {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        .title {
+            font-size: clamp(45px, 7vw, 90px);
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin: 0;
+
+            text-shadow:
+                0 4px 20px rgba(0,0,0,0.8);
+        }
+
+        .official {
+            margin-top: 10px;
+
+            font-size: 13px;
+            letter-spacing: 6px;
+
+            opacity: 0.8;
+        }
+
+        .line {
+            width: min(900px, 85vw);
+
+            height: 1px;
+
+            background: rgba(255,255,255,0.65);
+
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 14px;
+
+            flex-wrap: wrap;
+
+            width: min(1000px, 90vw);
+        }
+
+        .button {
+            min-width: 155px;
+
+            padding: 17px 25px;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            border: 1px solid rgba(255,255,255,0.55);
+
+            background: rgba(0,0,0,0.40);
+
+            backdrop-filter: blur(6px);
+
+            transition: all 0.2s ease;
+        }
+
+        .button:hover {
+            background: white;
+
+            color: black;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 8px 30px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 650px) {
+
+            .buttons {
+                display: grid;
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .button {
+                min-width: 0;
+            }
+
+            .button:last-child {
+                grid-column: 1 / 3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="page">
+
+        <h1 class="title">
+            Disorderly Suthton
+        </h1>
+
+        <div class="official">
+            OFFICIAL WIKI
+        </div>
+
+        <div class="line"></div>
+
+        <nav class="buttons">
+
+            <a class="button" href="#">
+                GAME
+            </a>
+
+            <a class="button" href="#">
+                CHARACTERS
+            </a>
+
+            <a class="button" href="#">
+                LOCATIONS
+            </a>
+
+            <a class="button" href="#">
+                LORE
+            </a>
+
+            <a class="button" href="#">
+                UPDATES
+            </a>
+
+        </nav>
+
+    </main>
+
+</body>
+</html>
