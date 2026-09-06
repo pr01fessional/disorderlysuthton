@@ -22,7 +22,7 @@
         body {
             margin: 0;
             width: 100%;
-            height: 100%;
+            min-height: 100%;
         }
 
         body {
@@ -39,8 +39,36 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed;
 
             min-height: 100vh;
+        }
+
+
+        /* =========================
+           GAME LOGO
+        ========================= */
+
+        .logo {
+            position: absolute;
+
+            top: 28px;
+            right: 32px;
+
+            width: 105px;
+            height: auto;
+
+            z-index: 10;
+
+            filter:
+                drop-shadow(0 4px 12px rgba(0, 0, 0, 0.7));
+
+            transition:
+                transform 0.2s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
 
@@ -61,7 +89,7 @@
 
             text-align: center;
 
-            padding: 30px;
+            padding: 100px 30px 60px;
         }
 
 
@@ -125,30 +153,27 @@
         ========================= */
 
         .buttons {
-            display: flex;
+            display: grid;
 
-            justify-content: center;
-
-            align-items: center;
+            grid-template-columns:
+                repeat(5, 1fr);
 
             gap: 12px;
 
-            flex-wrap: wrap;
-
-            width: min(950px, 90vw);
+            width: min(900px, 90vw);
         }
 
 
         /* =========================
-           IMAGE BUTTON
+           BUTTON
         ========================= */
 
         .button {
             position: relative;
 
-            width: 150px;
+            width: 100%;
 
-            height: 78px;
+            height: 68px;
 
             display: flex;
 
@@ -164,28 +189,25 @@
 
             border: 1px solid rgba(255, 255, 255, 0.55);
 
-            background-image:
-                linear-gradient(
-                    rgba(0, 0, 0, 0.15),
-                    rgba(0, 0, 0, 0.15)
-                ),
-                url("thumbnail1.png");
+            border-radius: 12px;
 
-            background-size: cover;
+            background:
+                rgba(0, 0, 0, 0.35);
 
-            background-position: center;
+            backdrop-filter: blur(7px);
 
             box-shadow:
-                0 5px 20px rgba(0, 0, 0, 0.35);
+                0 5px 18px rgba(0, 0, 0, 0.35);
 
             transition:
                 transform 0.25s ease,
+                background 0.25s ease,
                 box-shadow 0.25s ease;
         }
 
 
         /* =========================
-           BUTTON DARK OVERLAY
+           BUTTON OVERLAY
         ========================= */
 
         .button::before {
@@ -195,7 +217,8 @@
 
             inset: 0;
 
-            background: rgba(0, 0, 0, 0);
+            background:
+                rgba(255, 255, 255, 0);
 
             transition:
                 background 0.25s ease;
@@ -211,17 +234,20 @@
 
             z-index: 2;
 
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family:
+                'Roboto Condensed',
+                sans-serif;
 
-            font-size: 17px;
+            font-size: 18px;
 
             font-weight: 700;
 
-            letter-spacing: 3px;
+            letter-spacing: 1px;
 
             opacity: 0;
 
-            transform: translateY(8px);
+            transform:
+                translateY(8px);
 
             text-shadow:
                 0 3px 10px rgba(0, 0, 0, 0.9);
@@ -233,11 +259,32 @@
 
 
         /* =========================
-           HOVER EFFECT
+           DAMION BUTTON TEXT
+        ========================= */
+
+        .button .damion {
+            font-family:
+                'Damion',
+                cursive;
+
+            font-size: 23px;
+
+            font-weight: 400;
+
+            letter-spacing: 0;
+        }
+
+
+        /* =========================
+           HOVER
         ========================= */
 
         .button:hover {
-            transform: translateY(-4px);
+            transform:
+                translateY(-4px);
+
+            background:
+                rgba(0, 0, 0, 0.58);
 
             box-shadow:
                 0 10px 25px rgba(0, 0, 0, 0.55);
@@ -245,14 +292,33 @@
 
 
         .button:hover::before {
-            background: rgba(0, 0, 0, 0.58);
+            background:
+                rgba(255, 255, 255, 0.05);
         }
 
 
         .button:hover span {
             opacity: 1;
 
-            transform: translateY(0);
+            transform:
+                translateY(0);
+        }
+
+
+        /* =========================
+           SECOND ROW
+        ========================= */
+
+        .button:nth-child(6) {
+            grid-column: 2;
+        }
+
+        .button:nth-child(7) {
+            grid-column: 3;
+        }
+
+        .button:nth-child(8) {
+            grid-column: 4;
         }
 
 
@@ -260,30 +326,34 @@
            MOBILE
         ========================= */
 
-        @media (max-width: 750px) {
+        @media (max-width: 800px) {
 
             .buttons {
-                display: grid;
+                grid-template-columns:
+                    repeat(2, 1fr);
 
-                grid-template-columns: 1fr 1fr;
-
-                width: min(450px, 90vw);
+                width:
+                    min(500px, 90vw);
             }
 
-            .button {
-                width: 100%;
-
-                height: 75px;
-            }
-
-            .button:last-child {
-                grid-column: 1 / 3;
+            .button:nth-child(6),
+            .button:nth-child(7),
+            .button:nth-child(8) {
+                grid-column: auto;
             }
 
         }
 
 
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
         @media (max-width: 450px) {
+
+            .page {
+                padding-top: 90px;
+            }
 
             .title {
                 font-size: 42px;
@@ -295,11 +365,27 @@
 
             .line {
                 margin-top: 12px;
+
                 margin-bottom: 22px;
             }
 
             .button {
-                height: 70px;
+                height: 65px;
+            }
+
+            .button span {
+                font-size: 16px;
+            }
+
+            .button .damion {
+                font-size: 20px;
+            }
+
+            .logo {
+                width: 80px;
+
+                top: 20px;
+                right: 20px;
             }
 
         }
@@ -309,6 +395,22 @@
 
 
 <body>
+
+
+    <!-- =========================
+         GAME LOGO
+    ========================= -->
+
+    <img
+        class="logo"
+        src="ds_logo.png"
+        alt="Disorderly Suthton Logo"
+    >
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
 
     <main class="page">
 
@@ -320,7 +422,7 @@
         </h1>
 
 
-        <!-- DAMION FONT -->
+        <!-- OFFICIAL WIKI -->
 
         <div class="official">
             Official Wiki
@@ -332,43 +434,80 @@
         <div class="line"></div>
 
 
-        <!-- BUTTONS -->
+        <!-- =========================
+             8 WIKI BUTTONS
+        ========================= -->
 
         <nav class="buttons">
 
 
-            <!-- GAME -->
+            <!-- ROW 1 -->
 
-            <a class="button" href="#">
-                <span>GAME</span>
+
+            <a
+                class="button"
+                href="#"
+            >
+                <span>Game</span>
             </a>
 
 
-            <!-- CHARACTERS -->
-
-            <a class="button" href="#">
-                <span>CHARACTERS</span>
+            <a
+                class="button"
+                href="#"
+            >
+                <span class="damion">Characters</span>
             </a>
 
 
-            <!-- LOCATIONS -->
-
-            <a class="button" href="#">
-                <span>LOCATIONS</span>
+            <a
+                class="button"
+                href="#"
+            >
+                <span>Locations</span>
             </a>
 
 
-            <!-- LORE -->
-
-            <a class="button" href="#">
-                <span>LORE</span>
+            <a
+                class="button"
+                href="#"
+            >
+                <span class="damion">Lore</span>
             </a>
 
 
-            <!-- UPDATES -->
+            <a
+                class="button"
+                href="#"
+            >
+                <span>Updates</span>
+            </a>
 
-            <a class="button" href="#">
-                <span>UPDATES</span>
+
+            <!-- ROW 2 -->
+
+
+            <a
+                class="button"
+                href="#"
+            >
+                <span>Items</span>
+            </a>
+
+
+            <a
+                class="button"
+                href="#"
+            >
+                <span class="damion">Guides</span>
+            </a>
+
+
+            <a
+                class="button"
+                href="#"
+            >
+                <span>Community</span>
             </a>
 
 
