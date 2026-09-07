@@ -8,14 +8,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&family=Damion&display=swap" rel="stylesheet">
 
 <style>
-
-@font-face {
-    font-family: "Damion";
-    src: url("https://fonts.gstatic.com/s/damion/v14/hv-TlzNxIFoO84Yh5mxK.woff2") format("woff2");
-}
 
 * {
     box-sizing: border-box;
@@ -30,26 +25,35 @@ body {
 
 body {
     min-height: 100vh;
+
     background-image:
         linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)),
         url("safeAThome.png");
+
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
     font-family: "Roboto Condensed", sans-serif;
     color: white;
+
     overflow-x: hidden;
 }
 
-/* ---------------- LOGO ---------------- */
+
+/* ================= LOGO ================= */
 
 .logo {
     position: fixed;
+
     top: 28px;
     right: 32px;
+
     width: 135px;
     height: auto;
+
     z-index: 20;
+
     transition: opacity 0.2s ease;
 }
 
@@ -57,25 +61,30 @@ body {
     opacity: 0.65;
 }
 
-/* ---------------- BACK BUTTON ---------------- */
+
+/* ================= BACK BUTTON ================= */
 
 .back {
     position: absolute;
+
     top: 35px;
     left: 35px;
 
     color: white;
     text-decoration: none;
+
     font-size: 21px;
     font-weight: 600;
 
     padding: 10px 18px;
 
     background: rgba(0,0,0,0.30);
+
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
 
     border: 1px solid rgba(255,255,255,0.18);
+
     border-radius: 12px;
 
     transition: all 0.2s ease;
@@ -83,66 +92,98 @@ body {
 
 .back:hover {
     background: rgba(0,0,0,0.50);
+
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+
     transform: translateY(-2px);
 }
 
-/* ---------------- MAIN ---------------- */
+
+/* ================= MAIN ================= */
 
 .container {
     width: min(1050px, 92%);
+
     margin: 0 auto;
+
     padding-top: 110px;
     padding-bottom: 120px;
 }
 
+
+/* ================= TITLE ================= */
+
 .title {
     text-align: center;
+
     font-size: 64px;
     font-weight: 600;
+
     margin: 0;
+
     letter-spacing: 1px;
 }
 
+
+/* ================= THANK YOU ================= */
+
 .thanks {
     text-align: center;
+
     font-family: "Damion", cursive;
-    font-size: 25px;
-    margin-top: 5px;
+
+    font-size: 21px;
+
+    margin-top: 4px;
+
     opacity: 0.95;
 }
 
+
+/* ================= DIVIDERS ================= */
+
 .divider {
     width: 85%;
+
     height: 1px;
+
     background: rgba(255,255,255,0.35);
+
     margin: 32px auto;
 }
 
-/* ---------------- LARGE CREDITS ---------------- */
+
+/* ================= LARGE CREDITS ================= */
 
 .large-grid {
     display: flex;
+
     justify-content: center;
+
     gap: 35px;
+
     flex-wrap: wrap;
 }
 
 .large-card {
     width: 245px;
+
     padding: 22px 18px;
 
     text-align: center;
 
     background: rgba(0,0,0,0.30);
+
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
 
     border: 1px solid rgba(255,255,255,0.18);
+
     border-radius: 20px;
 
     text-decoration: none;
+
     color: white;
 
     transition: all 0.2s ease;
@@ -150,54 +191,94 @@ body {
 
 .large-card:hover {
     background: rgba(0,0,0,0.48);
+
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(13px);
+
     transform: translateY(-4px);
 }
+
+
+/* Roblox headshot */
 
 .large-card img {
     width: 155px;
     height: 155px;
+
     object-fit: cover;
+
     border-radius: 15px;
+
     display: block;
+
     margin: 0 auto 15px;
+
+    background: rgba(255,255,255,0.05);
 }
+
+
+/* ================= USERNAME / RANK ================= */
 
 .username {
     font-size: 23px;
+
     font-weight: 600;
 }
 
 .rank {
     font-size: 17px;
+
     opacity: 0.75;
+
     margin-top: 3px;
 }
 
-/* ---------------- SMALL CREDITS ---------------- */
+
+/* ================= CONTRIBUTORS TITLE ================= */
+
+.contributors-title {
+    text-align: center;
+
+    font-family: "Damion", cursive;
+
+    font-size: 32px;
+
+    margin-bottom: 22px;
+
+    opacity: 0.95;
+}
+
+
+/* ================= SMALL CREDITS ================= */
 
 .small-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 145px);
+
     justify-content: center;
+
     gap: 18px;
 }
 
 .small-card {
     width: 145px;
+
     padding: 12px 8px;
 
     text-align: center;
 
     background: rgba(0,0,0,0.28);
+
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 
     border: 1px solid rgba(255,255,255,0.15);
+
     border-radius: 15px;
 
     text-decoration: none;
+
     color: white;
 
     transition: all 0.2s ease;
@@ -205,18 +286,26 @@ body {
 
 .small-card:hover {
     background: rgba(0,0,0,0.46);
+
     backdrop-filter: blur(11px);
     -webkit-backdrop-filter: blur(11px);
+
     transform: translateY(-3px);
 }
 
 .small-card img {
     width: 85px;
     height: 85px;
+
     object-fit: cover;
+
     border-radius: 12px;
+
     display: block;
+
     margin: 0 auto 9px;
+
+    background: rgba(255,255,255,0.05);
 }
 
 .small-card .username {
@@ -227,22 +316,27 @@ body {
     font-size: 13px;
 }
 
-/* ---------------- CONTRIBUTORS ---------------- */
+
+/* ================= CONTRIBUTOR LIST ================= */
 
 .contributors {
     width: min(850px, 90%);
+
     margin: 0 auto;
 
     text-align: center;
 
     font-size: 17px;
+
     line-height: 1.8;
 
     background: rgba(0,0,0,0.25);
+
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 
     border: 1px solid rgba(255,255,255,0.14);
+
     border-radius: 18px;
 
     padding: 25px 35px;
@@ -252,27 +346,34 @@ body {
     opacity: 0.9;
 }
 
-/* ---------------- DISCORD ---------------- */
+
+/* ================= DISCORD ================= */
 
 .discord {
     position: fixed;
+
     right: 28px;
     bottom: 25px;
 
     color: white;
+
     text-decoration: none;
 
     font-size: 14px;
+
     font-weight: 700;
+
     letter-spacing: 1px;
 
     padding: 9px 15px;
 
     background: rgba(0,0,0,0.35);
+
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
 
     border: 1px solid rgba(255,255,255,0.18);
+
     border-radius: 10px;
 
     transition: all 0.2s ease;
@@ -280,16 +381,19 @@ body {
 
 .discord:hover {
     background: rgba(0,0,0,0.55);
+
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
 
-/* ---------------- MOBILE ---------------- */
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 700px) {
 
     .logo {
         width: 100px;
+
         top: 20px;
         right: 20px;
     }
@@ -297,7 +401,9 @@ body {
     .back {
         top: 22px;
         left: 20px;
+
         font-size: 17px;
+
         padding: 8px 13px;
     }
 
@@ -310,7 +416,7 @@ body {
     }
 
     .thanks {
-        font-size: 21px;
+        font-size: 19px;
     }
 
     .large-grid {
@@ -328,6 +434,7 @@ body {
 
     .small-grid {
         grid-template-columns: repeat(3, 120px);
+
         gap: 12px;
     }
 
@@ -342,6 +449,7 @@ body {
 
     .contributors {
         padding: 20px;
+
         font-size: 15px;
     }
 }
@@ -349,53 +457,107 @@ body {
 </style>
 </head>
 
+
 <body>
 
-<!-- LOGO -->
+
+<!-- ================= LOGO ================= -->
+
 <a href="https://www.roblox.com/games/121760921831203" target="_blank">
-    <img src="ds_logo.png" class="logo">
+    <img src="ds_logo.png" class="logo" alt="Disorderly Suthton">
 </a>
 
-<!-- BACK -->
+
+<!-- ================= BACK ================= -->
+
 <a href="index.html" class="back">◂ BACK</a>
 
+
 <div class="container">
+
+
+    <!-- ================= TITLE ================= -->
 
     <h1 class="title">Credits</h1>
 
     <div class="thanks">
-        Special thanks to this amazing team for helping make Disorderly Suthton possible.
+        Special thanks to this amazing team...
     </div>
+
 
     <div class="divider"></div>
 
 
-    <!-- ================= LARGE CREDITS ================= -->
+    <!-- ================= LARGE TEAM ================= -->
 
     <div class="large-grid">
 
-        <a class="large-card" href="https://www.roblox.com/users/2540523256/profile" target="_blank">
-            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=2540523256&width=420&height=420&format=png"
-                 onerror="this.style.opacity='0.25';">
+
+        <!-- DIRECTOR -->
+
+        <a
+            class="large-card"
+            href="https://www.roblox.com/users/2540523256/profile"
+            target="_blank"
+        >
+
+            <img
+                data-user-id="2540523256"
+                alt="Roblox avatar"
+            >
+
             <div class="username">@Director</div>
-            <div class="rank">Director</div>
+
+            <div class="rank">
+                Director
+            </div>
+
         </a>
 
 
-        <a class="large-card" href="https://www.roblox.com/users/4839201756/profile" target="_blank">
-            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=4839201756&width=420&height=420&format=png"
-                 onerror="this.style.opacity='0.25';">
+        <!-- LEAD CREATIVE CONTROL -->
+
+        <a
+            class="large-card"
+            href="https://www.roblox.com/users/4839201756/profile"
+            target="_blank"
+        >
+
+            <img
+                data-user-id="4839201756"
+                alt="Roblox avatar"
+            >
+
             <div class="username">@ElliotStone</div>
-            <div class="rank">Lead Creative Control</div>
+
+            <div class="rank">
+                Lead Creative Control
+            </div>
+
         </a>
 
 
-        <a class="large-card" href="https://www.roblox.com/users/7392518462/profile" target="_blank">
-            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=7392518462&width=420&height=420&format=png"
-                 onerror="this.style.opacity='0.25';">
+        <!-- LEAD DEVELOPER -->
+
+        <a
+            class="large-card"
+            href="https://www.roblox.com/users/7392518462/profile"
+            target="_blank"
+        >
+
+            <img
+                data-user-id="7392518462"
+                alt="Roblox avatar"
+            >
+
             <div class="username">@MasonByte</div>
-            <div class="rank">Lead Developer</div>
+
+            <div class="rank">
+                Lead Developer
+            </div>
+
         </a>
+
 
     </div>
 
@@ -403,80 +565,170 @@ body {
     <div class="divider"></div>
 
 
-    <!-- ================= SMALL CREDITS ================= -->
+    <!-- ================= CONTRIBUTORS TITLE ================= -->
+
+    <div class="contributors-title">
+        Contributors
+    </div>
+
+
+    <!-- ================= SMALL TEAM ================= -->
 
     <div class="small-grid">
 
-        <a class="small-card" href="https://www.roblox.com/users/3817264950/profile" target="_blank">
-            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=3817264950&width=420&height=420&format=png"
-                 onerror="this.style.opacity='0.25';">
+
+        <a
+            class="small-card"
+            href="https://www.roblox.com/users/3817264950/profile"
+            target="_blank"
+        >
+
+            <img data-user-id="3817264950" alt="Roblox avatar">
+
             <div class="username">@NovaBuilds</div>
-            <div class="rank">Creative Director</div>
+
+            <div class="rank">
+                Creative Director
+            </div>
+
         </a>
 
 
-        <a class="small-card" href="https://www.roblox.com/users/6251938471/profile" target="_blank">
-            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=6251938471&width=420&height=420&format=png"
-                 onerror="this.style.opacity='0.25';">
+        <a
+            class="small-card"
+            href="https://www.roblox.com/users/6251938471/profile"
+            target="_blank"
+        >
+
+            <img data-user-id="6251938471" alt="Roblox avatar">
+
             <div class="username">@AlexVex</div>
-            <div class="rank">Senior Builder</div>
+
+            <div class="rank">
+                Senior Builder
+            </div>
+
         </a>
 
 
-        <a class="small-card" href="https://www.roblox.com/users/8146293750/profile" target="_blank">
-            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=8146293750&width=420&height=420&format=png"
-                 onerror="this.style.opacity='0.25';">
+        <a
+            class="small-card"
+            href="https://www.roblox.com/users/8146293750/profile"
+            target="_blank"
+        >
+
+            <img data-user-id="8146293750" alt="Roblox avatar">
+
             <div class="username">@PixelForge</div>
-            <div class="rank">UI Designer</div>
+
+            <div class="rank">
+                UI Designer
+            </div>
+
         </a>
 
 
-        <a class="small-card" href="https://www.roblox.com/users/2964817359/profile" target="_blank">
-            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=2964817359&width=420&height=420&format=png"
-                 onerror="this.style.opacity='0.25';">
+        <a
+            class="small-card"
+            href="https://www.roblox.com/users/2964817359/profile"
+            target="_blank"
+        >
+
+            <img data-user-id="2964817359" alt="Roblox avatar">
+
             <div class="username">@RileyScripts</div>
-            <div class="rank">Scripter</div>
+
+            <div class="rank">
+                Scripter
+            </div>
+
         </a>
 
 
-        <a class="small-card" href="https://www.roblox.com/users/5729184630/profile" target="_blank">
-            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=5729184630&width=420&height=420&format=png"
-                 onerror="this.style.opacity='0.25';">
+        <a
+            class="small-card"
+            href="https://www.roblox.com/users/5729184630/profile"
+            target="_blank"
+        >
+
+            <img data-user-id="5729184630" alt="Roblox avatar">
+
             <div class="username">@JordanCreates</div>
-            <div class="rank">Animator</div>
+
+            <div class="rank">
+                Animator
+            </div>
+
         </a>
 
 
-        <a class="small-card" href="https://www.roblox.com/users/9472516384/profile" target="_blank">
-            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=9472516384&width=420&height=420&format=png"
-                 onerror="this.style.opacity='0.25';">
+        <a
+            class="small-card"
+            href="https://www.roblox.com/users/9472516384/profile"
+            target="_blank"
+        >
+
+            <img data-user-id="9472516384" alt="Roblox avatar">
+
             <div class="username">@SamRenders</div>
-            <div class="rank">3D Artist</div>
+
+            <div class="rank">
+                3D Artist
+            </div>
+
         </a>
 
 
-        <a class="small-card" href="https://www.roblox.com/users/4186372951/profile" target="_blank">
-            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=4186372951&width=420&height=420&format=png"
-                 onerror="this.style.opacity='0.25';">
+        <a
+            class="small-card"
+            href="https://www.roblox.com/users/4186372951/profile"
+            target="_blank"
+        >
+
+            <img data-user-id="4186372951" alt="Roblox avatar">
+
             <div class="username">@KaiDev</div>
-            <div class="rank">Systems Designer</div>
+
+            <div class="rank">
+                Systems Designer
+            </div>
+
         </a>
 
 
-        <a class="small-card" href="https://www.roblox.com/users/6835149270/profile" target="_blank">
-            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=6835149270&width=420&height=420&format=png"
-                 onerror="this.style.opacity='0.25';">
+        <a
+            class="small-card"
+            href="https://www.roblox.com/users/6835149270/profile"
+            target="_blank"
+        >
+
+            <img data-user-id="6835149270" alt="Roblox avatar">
+
             <div class="username">@MiaCreates</div>
-            <div class="rank">Environment Artist</div>
+
+            <div class="rank">
+                Environment Artist
+            </div>
+
         </a>
 
 
-        <a class="small-card" href="https://www.roblox.com/users/7519263840/profile" target="_blank">
-            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=7519263840&width=420&height=420&format=png"
-                 onerror="this.style.opacity='0.25';">
+        <a
+            class="small-card"
+            href="https://www.roblox.com/users/7519263840/profile"
+            target="_blank"
+        >
+
+            <img data-user-id="7519263840" alt="Roblox avatar">
+
             <div class="username">@NoahWorks</div>
-            <div class="rank">QA Lead</div>
+
+            <div class="rank">
+                QA Lead
+            </div>
+
         </a>
+
 
     </div>
 
@@ -489,30 +741,122 @@ body {
     <div class="contributors">
 
         <span>@LiamDev — Contributor</span><br>
+
         <span>@SophieBuilds — Community Manager</span><br>
+
         <span>@EthanWorks — Contributor</span><br>
+
         <span>@OliviaCodes — Contributor</span><br>
+
         <span>@LucasDesigns — Contributor</span><br>
+
         <span>@MayaCreates — Contributor</span><br>
+
         <span>@DanielRBLX — Playtester</span><br>
+
         <span>@ChloeVFX — Visual Effects</span><br>
+
         <span>@RyanSmith — Contributor</span><br>
+
         <span>@EllaBuilds — Contributor</span><br>
+
         <span>@JackRBLX — Playtester</span><br>
+
         <span>@AidenDev — Contributor</span><br>
+
         <span>@GraceCreates — Contributor</span><br>
+
         <span>@LeoWorks — Community Contributor</span><br>
+
         <span>@ZoeRBLX — Contributor</span>
 
     </div>
 
+
 </div>
 
 
-<!-- DISCORD -->
-<a class="discord" href="https://discord.gg/mzND9ZchJR" target="_blank">
+<!-- ================= DISCORD ================= -->
+
+<a
+    class="discord"
+    href="https://discord.gg/mzND9ZchJR"
+    target="_blank"
+>
     DISCORD
 </a>
+
+
+<!-- ========================================================= -->
+<!-- ROBLOX HEADSHOT LOADER                                    -->
+<!-- ========================================================= -->
+
+<script>
+
+async function loadRobloxHeadshots() {
+
+    const images = document.querySelectorAll("[data-user-id]");
+
+    for (const image of images) {
+
+        const userId = image.dataset.userId;
+
+        const thumbnailAPI =
+            "https://thumbnails.roblox.com/v1/users/avatar-headshot" +
+            "?userIds=" + encodeURIComponent(userId) +
+            "&size=420x420" +
+            "&format=Png" +
+            "&isCircular=false";
+
+        try {
+
+            const response = await fetch(thumbnailAPI);
+
+            if (!response.ok) {
+                throw new Error("Roblox thumbnail request failed");
+            }
+
+            const data = await response.json();
+
+            if (
+                data &&
+                data.data &&
+                data.data.length > 0 &&
+                data.data[0].imageUrl
+            ) {
+
+                image.src = data.data[0].imageUrl;
+
+            } else {
+
+                console.warn(
+                    "No Roblox headshot found for User ID:",
+                    userId
+                );
+
+            }
+
+        } catch (error) {
+
+            console.error(
+                "Could not load Roblox headshot for User ID:",
+                userId,
+                error
+            );
+
+        }
+
+    }
+
+}
+
+
+/* Start loading the avatars */
+
+loadRobloxHeadshots();
+
+</script>
+
 
 </body>
 </html>
