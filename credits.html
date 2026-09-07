@@ -1,977 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Credits - Disorderly Suthton</title>
+<title>Credits | Disorderly Suthton</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Damion&family=Roboto+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
+<style>
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+@font-face {
+    font-family: "Damion";
+    src: url("https://fonts.gstatic.com/s/damion/v14/hv-TlzNxIFoO84Yh5mxK.woff2") format("woff2");
+}
 
+* {
+    box-sizing: border-box;
+}
 
-    /* =========================
-       BODY / BACKGROUND
-       ========================= */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
 
-    body {
-      min-height: 100vh;
-
-      font-family: "Roboto Condensed", sans-serif;
-
-      color: white;
-
-      background-image:
-        linear-gradient(
-          rgba(0,0,0,0.50),
-          rgba(0,0,0,0.50)
-        ),
+body {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)),
         url("safeAThome.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Roboto Condensed", sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
 
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
+/* ---------------- LOGO ---------------- */
 
+.logo {
+    position: fixed;
+    top: 28px;
+    right: 32px;
+    width: 135px;
+    height: auto;
+    z-index: 20;
+    transition: opacity 0.2s ease;
+}
 
-    /* =========================
-       TOP RIGHT LOGO
-       ========================= */
+.logo:hover {
+    opacity: 0.65;
+}
 
-    .logo-link {
-      position: absolute;
+/* ---------------- BACK BUTTON ---------------- */
 
-      top: 28px;
-      right: 32px;
+.back {
+    position: absolute;
+    top: 35px;
+    left: 35px;
 
-      display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 600;
 
-      line-height: 0;
-    }
+    padding: 10px 18px;
+
+    background: rgba(0,0,0,0.30);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 12px;
+
+    transition: all 0.2s ease;
+}
+
+.back:hover {
+    background: rgba(0,0,0,0.50);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transform: translateY(-2px);
+}
+
+/* ---------------- MAIN ---------------- */
+
+.container {
+    width: min(1050px, 92%);
+    margin: 0 auto;
+    padding-top: 110px;
+    padding-bottom: 120px;
+}
+
+.title {
+    text-align: center;
+    font-size: 64px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.thanks {
+    text-align: center;
+    font-family: "Damion", cursive;
+    font-size: 25px;
+    margin-top: 5px;
+    opacity: 0.95;
+}
+
+.divider {
+    width: 85%;
+    height: 1px;
+    background: rgba(255,255,255,0.35);
+    margin: 32px auto;
+}
+
+/* ---------------- LARGE CREDITS ---------------- */
+
+.large-grid {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.large-card {
+    width: 245px;
+    padding: 22px 18px;
+
+    text-align: center;
+
+    background: rgba(0,0,0,0.30);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px;
+
+    text-decoration: none;
+    color: white;
+
+    transition: all 0.2s ease;
+}
+
+.large-card:hover {
+    background: rgba(0,0,0,0.48);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    transform: translateY(-4px);
+}
+
+.large-card img {
+    width: 155px;
+    height: 155px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.username {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.rank {
+    font-size: 17px;
+    opacity: 0.75;
+    margin-top: 3px;
+}
+
+/* ---------------- SMALL CREDITS ---------------- */
+
+.small-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 145px);
+    justify-content: center;
+    gap: 18px;
+}
+
+.small-card {
+    width: 145px;
+    padding: 12px 8px;
+
+    text-align: center;
+
+    background: rgba(0,0,0,0.28);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 15px;
+
+    text-decoration: none;
+    color: white;
+
+    transition: all 0.2s ease;
+}
+
+.small-card:hover {
+    background: rgba(0,0,0,0.46);
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+    transform: translateY(-3px);
+}
+
+.small-card img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto 9px;
+}
+
+.small-card .username {
+    font-size: 17px;
+}
+
+.small-card .rank {
+    font-size: 13px;
+}
+
+/* ---------------- CONTRIBUTORS ---------------- */
+
+.contributors {
+    width: min(850px, 90%);
+    margin: 0 auto;
+
+    text-align: center;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 18px;
+
+    padding: 25px 35px;
+}
+
+.contributors span {
+    opacity: 0.9;
+}
+
+/* ---------------- DISCORD ---------------- */
+
+.discord {
+    position: fixed;
+    right: 28px;
+    bottom: 25px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    padding: 9px 15px;
+
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 10px;
+
+    transition: all 0.2s ease;
+}
+
+.discord:hover {
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 700px) {
 
     .logo {
-      width: 135px;
-
-      filter:
-        drop-shadow(
-          0 4px 10px rgba(0,0,0,0.7)
-        );
-
-      transition: opacity 0.2s ease;
-    }
-
-    .logo-link:hover .logo {
-      opacity: 0.65;
-    }
-
-
-    /* =========================
-       BACK BUTTON
-       ========================= */
-
-    .back-button {
-      position: absolute;
-
-      top: 30px;
-      left: 30px;
-
-      padding: 9px 17px;
-
-      color: white;
-
-      text-decoration: none;
-
-      font-size: 15px;
-      font-weight: 800;
-
-      letter-spacing: 0.5px;
-
-      border: 1px solid rgba(255,255,255,0.5);
-
-      border-radius: 8px;
-
-      background: rgba(0,0,0,0.35);
-
-      backdrop-filter: blur(3px);
-      -webkit-backdrop-filter: blur(3px);
-
-      box-shadow:
-        0 4px 12px rgba(0,0,0,0.4);
-
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        backdrop-filter 0.2s ease;
-    }
-
-    .back-button:hover {
-      transform: translateY(-2px);
-
-      background: rgba(0,0,0,0.55);
-
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-
-
-    /* =========================
-       DISCORD BUTTON
-       ========================= */
-
-    .discord {
-      position: fixed;
-
-      right: 22px;
-      bottom: 18px;
-
-      height: 29px;
-
-      padding: 0 12px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      font-family: "Roboto Condensed", sans-serif;
-
-      font-size: 12px;
-      font-weight: 800;
-
-      letter-spacing: 1.3px;
-
-      color: white;
-
-      text-decoration: none;
-
-      border: 1px solid rgba(255,255,255,0.5);
-
-      border-radius: 7px;
-
-      background: rgba(0,0,0,0.38);
-
-      backdrop-filter: blur(3px);
-      -webkit-backdrop-filter: blur(3px);
-
-      box-shadow:
-        0 4px 12px rgba(0,0,0,0.4);
-
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        backdrop-filter 0.2s ease;
-    }
-
-    .discord:hover {
-      transform: translateY(-2px);
-
-      background: rgba(0,0,0,0.55);
-
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-
-
-    /* =========================
-       MAIN PAGE
-       ========================= */
-
-    .page {
-      width: 100%;
-
-      min-height: 100vh;
-
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: center;
-
-      padding: 115px 30px 80px;
-    }
-
-
-    /* =========================
-       TITLE
-       ========================= */
-
-    .title {
-      font-family: "Roboto Condensed", sans-serif;
-
-      font-size: clamp(48px, 7vw, 78px);
-
-      font-weight: 800;
-
-      letter-spacing: 2px;
-
-      text-align: center;
-
-      text-shadow:
-        0 4px 15px rgba(0,0,0,0.8);
-    }
-
-
-    /* =========================
-       THANK YOU TEXT
-       ========================= */
-
-    .thanks {
-      margin-top: 4px;
-
-      font-family: "Damion", cursive;
-
-      font-size: 27px;
-
-      text-align: center;
-
-      opacity: 0.9;
-
-      text-shadow:
-        0 3px 10px rgba(0,0,0,0.8);
-    }
-
-
-    /* =========================
-       DIVIDERS
-       ========================= */
-
-    .line {
-      width: min(850px, 85vw);
-
-      height: 1px;
-
-      background: rgba(255,255,255,0.65);
-
-      margin-top: 18px;
-      margin-bottom: 30px;
-
-      box-shadow:
-        0 2px 8px rgba(0,0,0,0.5);
-    }
-
-
-    /* =========================
-       TOP 3 DEVELOPERS
-       ========================= */
-
-    .main-team {
-      width: min(850px, 90vw);
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 18px;
-    }
-
-
-    .main-member {
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: center;
-
-      text-decoration: none;
-
-      color: white;
-    }
-
-
-    .headshot {
-      width: 100%;
-
-      aspect-ratio: 1 / 1;
-
-      object-fit: cover;
-
-      border-radius: 12px;
-
-      border: 1px solid rgba(255,255,255,0.55);
-
-      background: rgba(0,0,0,0.4);
-
-      box-shadow:
-        0 6px 18px rgba(0,0,0,0.5);
-
-      transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
-    }
-
-
-    .main-member:hover .headshot {
-      transform: translateY(-4px);
-
-      opacity: 0.75;
-    }
-
-
-    .member-name {
-      margin-top: 10px;
-
-      font-size: 22px;
-
-      font-weight: 800;
-
-      text-align: center;
-
-      text-shadow:
-        0 2px 7px rgba(0,0,0,0.9);
-    }
-
-
-    .member-rank {
-      margin-top: 2px;
-
-      font-family: "Damion", cursive;
-
-      font-size: 22px;
-
-      opacity: 0.9;
-
-      text-align: center;
-    }
-
-
-    /* =========================
-       9 SMALL TEAM MEMBERS
-       ========================= */
-
-    .small-team {
-      width: min(850px, 90vw);
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 18px 14px;
-    }
-
-
-    .small-member {
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: center;
-
-      text-decoration: none;
-
-      color: white;
-    }
-
-
-    .small-headshot {
-      width: 145px;
-
-      max-width: 100%;
-
-      aspect-ratio: 1 / 1;
-
-      object-fit: cover;
-
-      border-radius: 9px;
-
-      border: 1px solid rgba(255,255,255,0.5);
-
-      background: rgba(0,0,0,0.4);
-
-      box-shadow:
-        0 5px 14px rgba(0,0,0,0.45);
-
-      transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
-    }
-
-
-    .small-member:hover .small-headshot {
-      transform: translateY(-3px);
-
-      opacity: 0.75;
-    }
-
-
-    .small-name {
-      margin-top: 6px;
-
-      font-size: 16px;
-
-      font-weight: 700;
-
-      text-align: center;
-
-      text-shadow:
-        0 2px 6px rgba(0,0,0,0.9);
-    }
-
-
-    .small-rank {
-      margin-top: 1px;
-
-      font-family: "Damion", cursive;
-
-      font-size: 18px;
-
-      opacity: 0.85;
-
-      text-align: center;
-    }
-
-
-    /* =========================
-       CONTRIBUTORS
-       ========================= */
-
-    .contributors {
-      width: min(850px, 90vw);
-
-      padding: 24px 30px;
-
-      border: 1px solid rgba(255,255,255,0.5);
-
-      border-radius: 12px;
-
-      background: rgba(0,0,0,0.32);
-
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-
-      box-shadow:
-        0 6px 18px rgba(0,0,0,0.4);
-
-      text-align: center;
-    }
-
-
-    .contributors-title {
-      font-family: "Damion", cursive;
-
-      font-size: 27px;
-
-      margin-bottom: 12px;
-
-      opacity: 0.9;
-    }
-
-
-    .contributor-list {
-      font-size: 16px;
-
-      line-height: 1.8;
-
-      font-weight: 600;
-
-      opacity: 0.9;
-    }
-
-
-    /* =========================
-       MOBILE
-       ========================= */
-
-    @media (max-width: 800px) {
-
-      .logo-link {
+        width: 100px;
         top: 20px;
         right: 20px;
-      }
+    }
 
-      .logo {
-        width: 105px;
-      }
-
-      .back-button {
-        top: 20px;
+    .back {
+        top: 22px;
         left: 20px;
-      }
-
-      .page {
-        padding-top: 125px;
-      }
-
-      .main-team {
-        grid-template-columns: 1fr;
-
-        width: min(350px, 85vw);
-      }
-
-      .small-team {
-        grid-template-columns:
-          repeat(3, 1fr);
-
-        width: min(600px, 90vw);
-      }
-
-      .small-headshot {
-        width: 110px;
-      }
-
+        font-size: 17px;
+        padding: 8px 13px;
     }
 
+    .container {
+        padding-top: 95px;
+    }
 
-    @media (max-width: 500px) {
+    .title {
+        font-size: 48px;
+    }
 
-      .small-team {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
+    .thanks {
+        font-size: 21px;
+    }
 
-      .small-headshot {
+    .large-grid {
+        gap: 18px;
+    }
+
+    .large-card {
+        width: 200px;
+    }
+
+    .large-card img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .small-grid {
+        grid-template-columns: repeat(3, 120px);
+        gap: 12px;
+    }
+
+    .small-card {
         width: 120px;
-      }
-
-      .contributors {
-        padding: 18px 15px;
-      }
-
-      .contributor-list {
-        font-size: 14px;
-      }
-
     }
 
-  </style>
-</head>
+    .small-card img {
+        width: 70px;
+        height: 70px;
+    }
 
+    .contributors {
+        padding: 20px;
+        font-size: 15px;
+    }
+}
+
+</style>
+</head>
 
 <body>
 
+<!-- LOGO -->
+<a href="https://www.roblox.com/games/121760921831203" target="_blank">
+    <img src="ds_logo.png" class="logo">
+</a>
 
-  <!-- =========================
-       BACK BUTTON
-       ========================= -->
+<!-- BACK -->
+<a href="index.html" class="back">◂ BACK</a>
 
-  <a
-    class="back-button"
-    href="index.html"
-  >
-    ◂ BACK
-  </a>
+<div class="container">
 
-
-  <!-- =========================
-       GAME LOGO
-       ========================= -->
-
-  <a
-    class="logo-link"
-    href="https://www.roblox.com/games/121760921831203"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-
-    <img
-      class="logo"
-      src="ds_logo.png"
-      alt="Disorderly Suthton Logo"
-    >
-
-  </a>
-
-
-  <!-- =========================
-       PAGE
-       ========================= -->
-
-  <main class="page">
-
-
-    <!-- TITLE -->
-
-    <h1 class="title">
-      Credits
-    </h1>
-
+    <h1 class="title">Credits</h1>
 
     <div class="thanks">
-      Special thanks to this amazing team...
+        Special thanks to this amazing team for helping make Disorderly Suthton possible.
     </div>
 
-
-    <div class="line"></div>
-
-
-    <!-- =========================
-         TOP 3 DEVELOPERS
-         ========================= -->
-
-    <div class="main-team">
+    <div class="divider"></div>
 
 
-      <!-- DIRECTOR -->
+    <!-- ================= LARGE CREDITS ================= -->
 
-      <a
-        class="main-member"
-        href="https://www.roblox.com/users/2540523256/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+    <div class="large-grid">
 
-        <img
-          class="headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=2540523256&size=420x420&format=Png&isCircular=false"
-          alt="@Director"
-        >
-
-        <div class="member-name">
-          @Director
-        </div>
-
-        <div class="member-rank">
-          Director
-        </div>
-
-      </a>
+        <a class="large-card" href="https://www.roblox.com/users/2540523256/profile" target="_blank">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=2540523256&width=420&height=420&format=png"
+                 onerror="this.style.opacity='0.25';">
+            <div class="username">@Director</div>
+            <div class="rank">Director</div>
+        </a>
 
 
-      <!-- LEAD CREATIVE CONTROL -->
-
-      <a
-        class="main-member"
-        href="https://www.roblox.com/users/4839201756/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          class="headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=4839201756&size=420x420&format=Png&isCircular=false"
-          alt="@ElliotStone"
-        >
-
-        <div class="member-name">
-          @ElliotStone
-        </div>
-
-        <div class="member-rank">
-          Lead Creative Control
-        </div>
-
-      </a>
+        <a class="large-card" href="https://www.roblox.com/users/4839201756/profile" target="_blank">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=4839201756&width=420&height=420&format=png"
+                 onerror="this.style.opacity='0.25';">
+            <div class="username">@ElliotStone</div>
+            <div class="rank">Lead Creative Control</div>
+        </a>
 
 
-      <!-- LEAD DEVELOPER -->
-
-      <a
-        class="main-member"
-        href="https://www.roblox.com/users/7392518462/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          class="headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=7392518462&size=420x420&format=Png&isCircular=false"
-          alt="@MasonByte"
-        >
-
-        <div class="member-name">
-          @MasonByte
-        </div>
-
-        <div class="member-rank">
-          Lead Developer
-        </div>
-
-      </a>
-
+        <a class="large-card" href="https://www.roblox.com/users/7392518462/profile" target="_blank">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=7392518462&width=420&height=420&format=png"
+                 onerror="this.style.opacity='0.25';">
+            <div class="username">@MasonByte</div>
+            <div class="rank">Lead Developer</div>
+        </a>
 
     </div>
 
 
-    <div class="line"></div>
+    <div class="divider"></div>
 
 
-    <!-- =========================
-         9 OTHER TEAM MEMBERS
-         ========================= -->
+    <!-- ================= SMALL CREDITS ================= -->
 
-    <div class="small-team">
+    <div class="small-grid">
 
-
-      <a
-        class="small-member"
-        href="https://www.roblox.com/users/3817264950/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=3817264950&size=420x420&format=Png&isCircular=false"
-          alt="@NovaBuilds"
-        >
-
-        <div class="small-name">
-          @NovaBuilds
-        </div>
-
-        <div class="small-rank">
-          Creative Director
-        </div>
-
-      </a>
+        <a class="small-card" href="https://www.roblox.com/users/3817264950/profile" target="_blank">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=3817264950&width=420&height=420&format=png"
+                 onerror="this.style.opacity='0.25';">
+            <div class="username">@NovaBuilds</div>
+            <div class="rank">Creative Director</div>
+        </a>
 
 
-      <a
-        class="small-member"
-        href="https://www.roblox.com/users/6251938471/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=6251938471&size=420x420&format=Png&isCircular=false"
-          alt="@AlexVex"
-        >
-
-        <div class="small-name">
-          @AlexVex
-        </div>
-
-        <div class="small-rank">
-          Senior Builder
-        </div>
-
-      </a>
+        <a class="small-card" href="https://www.roblox.com/users/6251938471/profile" target="_blank">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=6251938471&width=420&height=420&format=png"
+                 onerror="this.style.opacity='0.25';">
+            <div class="username">@AlexVex</div>
+            <div class="rank">Senior Builder</div>
+        </a>
 
 
-      <a
-        class="small-member"
-        href="https://www.roblox.com/users/8146293750/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=8146293750&size=420x420&format=Png&isCircular=false"
-          alt="@PixelForge"
-        >
-
-        <div class="small-name">
-          @PixelForge
-        </div>
-
-        <div class="small-rank">
-          UI Designer
-        </div>
-
-      </a>
+        <a class="small-card" href="https://www.roblox.com/users/8146293750/profile" target="_blank">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=8146293750&width=420&height=420&format=png"
+                 onerror="this.style.opacity='0.25';">
+            <div class="username">@PixelForge</div>
+            <div class="rank">UI Designer</div>
+        </a>
 
 
-      <a
-        class="small-member"
-        href="https://www.roblox.com/users/2964817359/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=2964817359&size=420x420&format=Png&isCircular=false"
-          alt="@RileyScripts"
-        >
-
-        <div class="small-name">
-          @RileyScripts
-        </div>
-
-        <div class="small-rank">
-          Scripter
-        </div>
-
-      </a>
+        <a class="small-card" href="https://www.roblox.com/users/2964817359/profile" target="_blank">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=2964817359&width=420&height=420&format=png"
+                 onerror="this.style.opacity='0.25';">
+            <div class="username">@RileyScripts</div>
+            <div class="rank">Scripter</div>
+        </a>
 
 
-      <a
-        class="small-member"
-        href="https://www.roblox.com/users/5729184630/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=5729184630&size=420x420&format=Png&isCircular=false"
-          alt="@JordanCreates"
-        >
-
-        <div class="small-name">
-          @JordanCreates
-        </div>
-
-        <div class="small-rank">
-          Animator
-        </div>
-
-      </a>
+        <a class="small-card" href="https://www.roblox.com/users/5729184630/profile" target="_blank">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=5729184630&width=420&height=420&format=png"
+                 onerror="this.style.opacity='0.25';">
+            <div class="username">@JordanCreates</div>
+            <div class="rank">Animator</div>
+        </a>
 
 
-      <a
-        class="small-member"
-        href="https://www.roblox.com/users/9472516384/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=9472516384&size=420x420&format=Png&isCircular=false"
-          alt="@SamRenders"
-        >
-
-        <div class="small-name">
-          @SamRenders
-        </div>
-
-        <div class="small-rank">
-          3D Artist
-        </div>
-
-      </a>
+        <a class="small-card" href="https://www.roblox.com/users/9472516384/profile" target="_blank">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=9472516384&width=420&height=420&format=png"
+                 onerror="this.style.opacity='0.25';">
+            <div class="username">@SamRenders</div>
+            <div class="rank">3D Artist</div>
+        </a>
 
 
-      <a
-        class="small-member"
-        href="https://www.roblox.com/users/4186372951/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=4186372951&size=420x420&format=Png&isCircular=false"
-          alt="@KaiDev"
-        >
-
-        <div class="small-name">
-          @KaiDev
-        </div>
-
-        <div class="small-rank">
-          Systems Designer
-        </div>
-
-      </a>
+        <a class="small-card" href="https://www.roblox.com/users/4186372951/profile" target="_blank">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=4186372951&width=420&height=420&format=png"
+                 onerror="this.style.opacity='0.25';">
+            <div class="username">@KaiDev</div>
+            <div class="rank">Systems Designer</div>
+        </a>
 
 
-      <a
-        class="small-member"
-        href="https://www.roblox.com/users/6835149270/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=6835149270&size=420x420&format=Png&isCircular=false"
-          alt="@MiaCreates"
-        >
-
-        <div class="small-name">
-          @MiaCreates
-        </div>
-
-        <div class="small-rank">
-          Environment Artist
-        </div>
-
-      </a>
+        <a class="small-card" href="https://www.roblox.com/users/6835149270/profile" target="_blank">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=6835149270&width=420&height=420&format=png"
+                 onerror="this.style.opacity='0.25';">
+            <div class="username">@MiaCreates</div>
+            <div class="rank">Environment Artist</div>
+        </a>
 
 
-      <a
-        class="small-member"
-        href="https://www.roblox.com/users/7519263840/profile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=7519263840&size=420x420&format=Png&isCircular=false"
-          alt="@NoahWorks"
-        >
-
-        <div class="small-name">
-          @NoahWorks
-        </div>
-
-        <div class="small-rank">
-          QA Lead
-        </div>
-
-      </a>
-
+        <a class="small-card" href="https://www.roblox.com/users/7519263840/profile" target="_blank">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=7519263840&width=420&height=420&format=png"
+                 onerror="this.style.opacity='0.25';">
+            <div class="username">@NoahWorks</div>
+            <div class="rank">QA Lead</div>
+        </a>
 
     </div>
 
 
-    <div class="line"></div>
+    <div class="divider"></div>
 
 
-    <!-- =========================
-         CONTRIBUTORS
-         ========================= -->
+    <!-- ================= CONTRIBUTORS ================= -->
 
     <div class="contributors">
 
-      <div class="contributors-title">
-        Contributors
-      </div>
-
-      <div class="contributor-list">
-
-        @LiamDev — Contributor<br>
-        @SophieBuilds — Community Manager<br>
-        @EthanWorks — Contributor<br>
-        @OliviaCodes — Contributor<br>
-        @LucasDesigns — Contributor<br>
-        @MayaCreates — Contributor<br>
-        @DanielRBLX — Playtester<br>
-        @ChloeVFX — Visual Effects<br>
-        @RyanSmith — Contributor<br>
-        @EllaBuilds — Contributor<br>
-        @JackRBLX — Playtester<br>
-        @AidenDev — Contributor<br>
-        @GraceCreates — Contributor<br>
-        @LeoWorks — Community Contributor<br>
-        @ZoeRBLX — Contributor
-
-      </div>
+        <span>@LiamDev — Contributor</span><br>
+        <span>@SophieBuilds — Community Manager</span><br>
+        <span>@EthanWorks — Contributor</span><br>
+        <span>@OliviaCodes — Contributor</span><br>
+        <span>@LucasDesigns — Contributor</span><br>
+        <span>@MayaCreates — Contributor</span><br>
+        <span>@DanielRBLX — Playtester</span><br>
+        <span>@ChloeVFX — Visual Effects</span><br>
+        <span>@RyanSmith — Contributor</span><br>
+        <span>@EllaBuilds — Contributor</span><br>
+        <span>@JackRBLX — Playtester</span><br>
+        <span>@AidenDev — Contributor</span><br>
+        <span>@GraceCreates — Contributor</span><br>
+        <span>@LeoWorks — Community Contributor</span><br>
+        <span>@ZoeRBLX — Contributor</span>
 
     </div>
 
+</div>
 
-  </main>
 
-
-  <!-- =========================
-       DISCORD
-       ========================= -->
-
-  <a
-    class="discord"
-    href="https://discord.gg/mzND9ZchJR"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+<!-- DISCORD -->
+<a class="discord" href="https://discord.gg/mzND9ZchJR" target="_blank">
     DISCORD
-  </a>
-
+</a>
 
 </body>
 </html>
