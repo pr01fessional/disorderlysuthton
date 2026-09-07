@@ -34,7 +34,7 @@
           rgba(0,0,0,0.50),
           rgba(0,0,0,0.50)
         ),
-        url("community.png");
+        url("safeAThome.png");
 
       background-size: cover;
       background-position: center;
@@ -91,7 +91,9 @@
       text-decoration: none;
 
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 800;
+
+      letter-spacing: 0.5px;
 
       border: 1px solid rgba(255,255,255,0.5);
 
@@ -285,8 +287,6 @@
     }
 
 
-    /* Headshot square */
-
     .headshot {
       width: 100%;
 
@@ -305,8 +305,7 @@
 
       transition:
         transform 0.2s ease,
-        opacity 0.2s ease,
-        backdrop-filter 0.2s ease;
+        opacity 0.2s ease;
     }
 
 
@@ -345,7 +344,7 @@
 
 
     /* =========================
-       SMALL TEAM
+       9 SMALL TEAM MEMBERS
        ========================= */
 
     .small-team {
@@ -356,7 +355,7 @@
       grid-template-columns:
         repeat(3, 1fr);
 
-      gap: 14px;
+      gap: 18px 14px;
     }
 
 
@@ -374,13 +373,15 @@
 
 
     .small-headshot {
-      width: 100%;
+      width: 145px;
+
+      max-width: 100%;
 
       aspect-ratio: 1 / 1;
 
       object-fit: cover;
 
-      border-radius: 10px;
+      border-radius: 9px;
 
       border: 1px solid rgba(255,255,255,0.5);
 
@@ -403,13 +404,16 @@
 
 
     .small-name {
-      margin-top: 7px;
+      margin-top: 6px;
 
-      font-size: 17px;
+      font-size: 16px;
 
       font-weight: 700;
 
       text-align: center;
+
+      text-shadow:
+        0 2px 6px rgba(0,0,0,0.9);
     }
 
 
@@ -418,7 +422,7 @@
 
       font-family: "Damion", cursive;
 
-      font-size: 19px;
+      font-size: 18px;
 
       opacity: 0.85;
 
@@ -433,7 +437,7 @@
     .contributors {
       width: min(850px, 90vw);
 
-      padding: 22px 30px;
+      padding: 24px 30px;
 
       border: 1px solid rgba(255,255,255,0.5);
 
@@ -499,11 +503,19 @@
 
       .main-team {
         grid-template-columns: 1fr;
+
         width: min(350px, 85vw);
       }
 
       .small-team {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(3, 1fr);
+
+        width: min(600px, 90vw);
+      }
+
+      .small-headshot {
+        width: 110px;
       }
 
     }
@@ -512,7 +524,12 @@
     @media (max-width: 500px) {
 
       .small-team {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .small-headshot {
+        width: 120px;
       }
 
       .contributors {
@@ -540,7 +557,7 @@
     class="back-button"
     href="index.html"
   >
-    ← Back
+    ◂ BACK
   </a>
 
 
@@ -597,19 +614,19 @@
 
       <a
         class="main-member"
-        href="https://www.roblox.com/users/USER_ID_1/profile"
+        href="https://www.roblox.com/users/2540523256/profile"
         target="_blank"
         rel="noopener noreferrer"
       >
 
         <img
           class="headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=USER_ID_1&size=420x420&format=Png&isCircular=false"
-          alt="Director"
+          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=2540523256&size=420x420&format=Png&isCircular=false"
+          alt="@Director"
         >
 
         <div class="member-name">
-          USERNAME
+          @Director
         </div>
 
         <div class="member-rank">
@@ -623,19 +640,19 @@
 
       <a
         class="main-member"
-        href="https://www.roblox.com/users/USER_ID_2/profile"
+        href="https://www.roblox.com/users/4839201756/profile"
         target="_blank"
         rel="noopener noreferrer"
       >
 
         <img
           class="headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=USER_ID_2&size=420x420&format=Png&isCircular=false"
-          alt="Lead Creative Control"
+          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=4839201756&size=420x420&format=Png&isCircular=false"
+          alt="@ElliotStone"
         >
 
         <div class="member-name">
-          USERNAME
+          @ElliotStone
         </div>
 
         <div class="member-rank">
@@ -649,19 +666,19 @@
 
       <a
         class="main-member"
-        href="https://www.roblox.com/users/USER_ID_3/profile"
+        href="https://www.roblox.com/users/7392518462/profile"
         target="_blank"
         rel="noopener noreferrer"
       >
 
         <img
           class="headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=USER_ID_3&size=420x420&format=Png&isCircular=false"
-          alt="Lead Developer"
+          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=7392518462&size=420x420&format=Png&isCircular=false"
+          alt="@MasonByte"
         >
 
         <div class="member-name">
-          USERNAME
+          @MasonByte
         </div>
 
         <div class="member-rank">
@@ -678,7 +695,7 @@
 
 
     <!-- =========================
-         6 OTHER TEAM MEMBERS
+         9 OTHER TEAM MEMBERS
          ========================= -->
 
     <div class="small-team">
@@ -686,23 +703,23 @@
 
       <a
         class="small-member"
-        href="https://www.roblox.com/users/USER_ID_4/profile"
+        href="https://www.roblox.com/users/3817264950/profile"
         target="_blank"
         rel="noopener noreferrer"
       >
 
         <img
           class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=USER_ID_4&size=420x420&format=Png&isCircular=false"
-          alt="Team Member"
+          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=3817264950&size=420x420&format=Png&isCircular=false"
+          alt="@NovaBuilds"
         >
 
         <div class="small-name">
-          USERNAME
+          @NovaBuilds
         </div>
 
         <div class="small-rank">
-          RANK
+          Creative Director
         </div>
 
       </a>
@@ -710,23 +727,23 @@
 
       <a
         class="small-member"
-        href="https://www.roblox.com/users/USER_ID_5/profile"
+        href="https://www.roblox.com/users/6251938471/profile"
         target="_blank"
         rel="noopener noreferrer"
       >
 
         <img
           class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=USER_ID_5&size=420x420&format=Png&isCircular=false"
-          alt="Team Member"
+          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=6251938471&size=420x420&format=Png&isCircular=false"
+          alt="@AlexVex"
         >
 
         <div class="small-name">
-          USERNAME
+          @AlexVex
         </div>
 
         <div class="small-rank">
-          RANK
+          Senior Builder
         </div>
 
       </a>
@@ -734,23 +751,23 @@
 
       <a
         class="small-member"
-        href="https://www.roblox.com/users/USER_ID_6/profile"
+        href="https://www.roblox.com/users/8146293750/profile"
         target="_blank"
         rel="noopener noreferrer"
       >
 
         <img
           class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=USER_ID_6&size=420x420&format=Png&isCircular=false"
-          alt="Team Member"
+          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=8146293750&size=420x420&format=Png&isCircular=false"
+          alt="@PixelForge"
         >
 
         <div class="small-name">
-          USERNAME
+          @PixelForge
         </div>
 
         <div class="small-rank">
-          RANK
+          UI Designer
         </div>
 
       </a>
@@ -758,23 +775,23 @@
 
       <a
         class="small-member"
-        href="https://www.roblox.com/users/USER_ID_7/profile"
+        href="https://www.roblox.com/users/2964817359/profile"
         target="_blank"
         rel="noopener noreferrer"
       >
 
         <img
           class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=USER_ID_7&size=420x420&format=Png&isCircular=false"
-          alt="Team Member"
+          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=2964817359&size=420x420&format=Png&isCircular=false"
+          alt="@RileyScripts"
         >
 
         <div class="small-name">
-          USERNAME
+          @RileyScripts
         </div>
 
         <div class="small-rank">
-          RANK
+          Scripter
         </div>
 
       </a>
@@ -782,23 +799,23 @@
 
       <a
         class="small-member"
-        href="https://www.roblox.com/users/USER_ID_8/profile"
+        href="https://www.roblox.com/users/5729184630/profile"
         target="_blank"
         rel="noopener noreferrer"
       >
 
         <img
           class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=USER_ID_8&size=420x420&format=Png&isCircular=false"
-          alt="Team Member"
+          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=5729184630&size=420x420&format=Png&isCircular=false"
+          alt="@JordanCreates"
         >
 
         <div class="small-name">
-          USERNAME
+          @JordanCreates
         </div>
 
         <div class="small-rank">
-          RANK
+          Animator
         </div>
 
       </a>
@@ -806,23 +823,95 @@
 
       <a
         class="small-member"
-        href="https://www.roblox.com/users/USER_ID_9/profile"
+        href="https://www.roblox.com/users/9472516384/profile"
         target="_blank"
         rel="noopener noreferrer"
       >
 
         <img
           class="small-headshot"
-          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=USER_ID_9&size=420x420&format=Png&isCircular=false"
-          alt="Team Member"
+          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=9472516384&size=420x420&format=Png&isCircular=false"
+          alt="@SamRenders"
         >
 
         <div class="small-name">
-          USERNAME
+          @SamRenders
         </div>
 
         <div class="small-rank">
-          RANK
+          3D Artist
+        </div>
+
+      </a>
+
+
+      <a
+        class="small-member"
+        href="https://www.roblox.com/users/4186372951/profile"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <img
+          class="small-headshot"
+          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=4186372951&size=420x420&format=Png&isCircular=false"
+          alt="@KaiDev"
+        >
+
+        <div class="small-name">
+          @KaiDev
+        </div>
+
+        <div class="small-rank">
+          Systems Designer
+        </div>
+
+      </a>
+
+
+      <a
+        class="small-member"
+        href="https://www.roblox.com/users/6835149270/profile"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <img
+          class="small-headshot"
+          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=6835149270&size=420x420&format=Png&isCircular=false"
+          alt="@MiaCreates"
+        >
+
+        <div class="small-name">
+          @MiaCreates
+        </div>
+
+        <div class="small-rank">
+          Environment Artist
+        </div>
+
+      </a>
+
+
+      <a
+        class="small-member"
+        href="https://www.roblox.com/users/7519263840/profile"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <img
+          class="small-headshot"
+          src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=7519263840&size=420x420&format=Png&isCircular=false"
+          alt="@NoahWorks"
+        >
+
+        <div class="small-name">
+          @NoahWorks
+        </div>
+
+        <div class="small-rank">
+          QA Lead
         </div>
 
       </a>
@@ -846,16 +935,21 @@
 
       <div class="contributor-list">
 
-        USERNAME — CONTRIBUTOR<br>
-        USERNAME2 — COMMUNITY MANAGER<br>
-        USERNAME3 — CONTRIBUTOR<br>
-        USERNAME4 — CONTRIBUTOR<br>
-        USERNAME5 — CONTRIBUTOR<br>
-        USERNAME6 — CONTRIBUTOR<br>
-        USERNAME7 — CONTRIBUTOR<br>
-        USERNAME8 — CONTRIBUTOR<br>
-        USERNAME9 — CONTRIBUTOR<br>
-        USERNAME10 — CONTRIBUTOR
+        @LiamDev — Contributor<br>
+        @SophieBuilds — Community Manager<br>
+        @EthanWorks — Contributor<br>
+        @OliviaCodes — Contributor<br>
+        @LucasDesigns — Contributor<br>
+        @MayaCreates — Contributor<br>
+        @DanielRBLX — Playtester<br>
+        @ChloeVFX — Visual Effects<br>
+        @RyanSmith — Contributor<br>
+        @EllaBuilds — Contributor<br>
+        @JackRBLX — Playtester<br>
+        @AidenDev — Contributor<br>
+        @GraceCreates — Contributor<br>
+        @LeoWorks — Community Contributor<br>
+        @ZoeRBLX — Contributor
 
       </div>
 
