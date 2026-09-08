@@ -36,8 +36,10 @@ body {
     background-attachment: fixed;
 
     min-height: 100vh;
+
     padding: 55px 40px 100px;
 }
+
 
 /* =========================
    TOP LOGO
@@ -45,6 +47,7 @@ body {
 
 .logo {
     position: fixed;
+
     top: 28px;
     right: 32px;
 
@@ -60,31 +63,37 @@ body {
     opacity: 0.65;
 }
 
+
 /* =========================
    BACK BUTTON
 ========================= */
 
 .back-button {
     position: fixed;
+
     top: 32px;
     left: 32px;
 
-    padding: 10px 18px;
+    padding: 8px 15px;
 
     color: white;
     text-decoration: none;
 
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 18px;
+
+    font-size: 16px;
     font-weight: 600;
-    letter-spacing: 1px;
+
+    letter-spacing: 0.8px;
 
     background: rgba(0,0,0,0.35);
+
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 
     border: 1px solid rgba(255,255,255,0.18);
-    border-radius: 12px;
+
+    border-radius: 10px;
 
     transition:
         background 0.25s ease,
@@ -101,14 +110,17 @@ body {
     transform: translateX(-2px);
 }
 
+
 /* =========================
    MAIN CONTAINER
 ========================= */
 
 .container {
-    width: min(1250px, 100%);
+    width: min(1180px, 100%);
+
     margin: 0 auto;
 }
+
 
 /* =========================
    TITLE
@@ -118,6 +130,7 @@ body {
     text-align: center;
 
     font-family: 'Roboto Condensed', sans-serif;
+
     font-size: 64px;
     font-weight: 600;
 
@@ -129,19 +142,48 @@ body {
         0 3px 10px rgba(0,0,0,0.7);
 }
 
+
+/* =========================
+   SUBTITLE
+========================= */
+
 .page-subtitle {
     text-align: center;
 
     font-family: 'Damion', cursive;
+
     font-size: 27px;
 
-    margin: 0 0 35px;
+    margin: 0 0 12px;
 
     opacity: 0.95;
 
     text-shadow:
         0 2px 8px rgba(0,0,0,0.7);
 }
+
+
+/* =========================
+   PAGE DESCRIPTION
+========================= */
+
+.page-description {
+    width: min(750px, 100%);
+
+    margin: 0 auto 32px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    line-height: 1.45;
+
+    opacity: 0.78;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,0.65);
+}
+
 
 /* =========================
    DIVIDER
@@ -155,8 +197,9 @@ body {
 
     background: rgba(255,255,255,0.35);
 
-    margin: 30px auto 40px;
+    margin: 30px auto 38px;
 }
+
 
 /* =========================
    SECTION TITLES
@@ -165,11 +208,11 @@ body {
 .section-title {
     font-family: 'Damion', cursive;
 
-    font-size: 38px;
+    font-size: 36px;
 
     text-align: center;
 
-    margin: 35px 0 8px;
+    margin: 32px 0 6px;
 
     text-shadow:
         0 2px 8px rgba(0,0,0,0.7);
@@ -178,12 +221,13 @@ body {
 .section-description {
     text-align: center;
 
-    font-size: 17px;
+    font-size: 16px;
 
-    opacity: 0.8;
+    opacity: 0.78;
 
-    margin-bottom: 30px;
+    margin-bottom: 27px;
 }
+
 
 /* =========================
    ACHIEVEMENT GRID
@@ -195,10 +239,11 @@ body {
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
-    gap: 25px;
+    gap: 21px;
 
     width: 100%;
 }
+
 
 /* =========================
    ACHIEVEMENT CARD
@@ -211,7 +256,7 @@ body {
 
     border: 1px solid rgba(255,255,255,0.16);
 
-    border-radius: 16px;
+    border-radius: 14px;
 
     overflow: hidden;
 
@@ -219,7 +264,7 @@ body {
     -webkit-backdrop-filter: blur(5px);
 
     box-shadow:
-        0 8px 25px rgba(0,0,0,0.30);
+        0 8px 22px rgba(0,0,0,0.30);
 
     transition:
         transform 0.25s ease,
@@ -229,7 +274,7 @@ body {
 }
 
 .achievement-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 
     background: rgba(0,0,0,0.55);
 
@@ -237,11 +282,12 @@ body {
     -webkit-backdrop-filter: blur(12px);
 
     box-shadow:
-        0 12px 35px rgba(0,0,0,0.45);
+        0 12px 30px rgba(0,0,0,0.45);
 }
 
+
 /* =========================
-   TROPHY IMAGE
+   ACHIEVEMENT IMAGE
 ========================= */
 
 .achievement-image-container {
@@ -249,52 +295,56 @@ body {
 
     aspect-ratio: 1 / 1;
 
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.38);
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    padding: 22px;
+    overflow: hidden;
 }
 
 .achievement-image {
     width: 100%;
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
 
     display: block;
 
     filter:
-        drop-shadow(0 8px 12px rgba(0,0,0,0.45));
+        drop-shadow(0 7px 10px rgba(0,0,0,0.45));
 
     transition:
         transform 0.25s ease;
 }
 
 .achievement-card:hover .achievement-image {
-    transform: scale(1.045);
+    transform: scale(1.035);
 }
+
 
 /* =========================
    CARD CONTENT
 ========================= */
 
 .achievement-content {
-    padding: 18px 20px 21px;
+    padding: 16px 18px 18px;
 }
 
 .achievement-name {
-    font-size: 27px;
+    font-size: 25px;
 
     font-weight: 600;
 
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 
     text-shadow:
         0 2px 5px rgba(0,0,0,0.6);
 }
+
 
 /* =========================
    BADGES
@@ -305,15 +355,15 @@ body {
 
     flex-wrap: wrap;
 
-    gap: 7px;
+    gap: 6px;
 
-    margin-bottom: 14px;
+    margin-bottom: 13px;
 }
 
 .badge {
     display: inline-block;
 
-    padding: 4px 9px;
+    padding: 4px 8px;
 
     border-radius: 7px;
 
@@ -321,11 +371,11 @@ body {
 
     border: 1px solid rgba(255,255,255,0.16);
 
-    font-size: 13px;
+    font-size: 12px;
 
     font-weight: 600;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 0.45px;
 
     text-transform: uppercase;
 }
@@ -338,22 +388,23 @@ body {
     background: rgba(190,70,70,0.25);
 }
 
+
 /* =========================
-   INFO ROWS
+   INFO
 ========================= */
 
 .info {
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .info-row {
-    margin-bottom: 12px;
+    margin-bottom: 11px;
 }
 
 .info-label {
     font-weight: 700;
 
-    font-size: 15px;
+    font-size: 14px;
 
     text-transform: uppercase;
 
@@ -365,10 +416,11 @@ body {
 }
 
 .info-value {
-    font-size: 17px;
+    font-size: 16px;
 
     line-height: 1.35;
 }
+
 
 /* =========================
    DIFFICULTY
@@ -380,6 +432,8 @@ body {
     align-items: center;
 
     gap: 8px;
+
+    font-size: 16px;
 }
 
 .difficulty-dots {
@@ -401,16 +455,17 @@ body {
     background: rgba(255,255,255,0.9);
 }
 
+
 /* =========================
-   SMALL WIKI NOTE
+   WIKI NOTE
 ========================= */
 
 .wiki-note {
     width: min(900px, 100%);
 
-    margin: 45px auto 20px;
+    margin: 42px auto 20px;
 
-    padding: 18px 22px;
+    padding: 17px 21px;
 
     background: rgba(0,0,0,0.34);
 
@@ -423,12 +478,13 @@ body {
 
     text-align: center;
 
-    font-size: 16px;
+    font-size: 15px;
 
     line-height: 1.5;
 
     opacity: 0.9;
 }
+
 
 /* =========================
    DISCORD
@@ -475,6 +531,7 @@ body {
     -webkit-backdrop-filter: blur(12px);
 }
 
+
 /* =========================
    RESPONSIVE
 ========================= */
@@ -487,6 +544,7 @@ body {
     }
 
 }
+
 
 @media (max-width: 650px) {
 
@@ -506,9 +564,9 @@ body {
         top: 18px;
         left: 18px;
 
-        font-size: 16px;
+        font-size: 15px;
 
-        padding: 8px 13px;
+        padding: 7px 12px;
     }
 
     .page-title {
@@ -519,18 +577,18 @@ body {
         font-size: 23px;
     }
 
+    .page-description {
+        font-size: 15px;
+    }
+
     .achievement-grid {
         grid-template-columns: 1fr;
 
-        gap: 20px;
-    }
-
-    .achievement-image-container {
-        padding: 28px;
+        gap: 18px;
     }
 
     .achievement-name {
-        font-size: 25px;
+        font-size: 24px;
     }
 
 }
@@ -540,11 +598,15 @@ body {
 
 <body>
 
+
 <!-- =========================
      LOGO
 ========================= -->
 
-<a href="https://www.roblox.com/games/121760921831203" target="_blank">
+<a
+    href="https://www.roblox.com/games/121760921831203"
+    target="_blank"
+>
     <img
         src="ds_logo.png"
         class="logo"
@@ -552,15 +614,21 @@ body {
     >
 </a>
 
+
 <!-- =========================
-     BACK
+     BACK BUTTON
 ========================= -->
 
-<a href="index.html" class="back-button">
+<a
+    href="index.html"
+    class="back-button"
+>
     ◂ BACK
 </a>
 
+
 <div class="container">
+
 
     <!-- =========================
          TITLE
@@ -570,9 +638,19 @@ body {
         Achievements
     </h1>
 
+
     <div class="page-subtitle">
         Trophies, awards and accomplishments
     </div>
+
+
+    <div class="page-description">
+        Trophies and awards can be viewed in owned apartments or
+        commercial properties. This page documents the achievements
+        currently available in Disorderly Suthton, including their
+        requirements, availability and difficulty.
+    </div>
+
 
     <div class="divider"></div>
 
@@ -626,6 +704,7 @@ body {
                 <div class="info">
 
                     <div class="info-row">
+
                         <div class="info-label">
                             Description
                         </div>
@@ -633,9 +712,12 @@ body {
                         <div class="info-value">
                             Prove that you can think several steps ahead and successfully complete the required challenge.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Requirements
                         </div>
@@ -643,9 +725,12 @@ body {
                         <div class="info-value">
                             Complete the Mastermind challenge.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Difficulty
                         </div>
@@ -663,6 +748,7 @@ body {
                             Hard
 
                         </div>
+
                     </div>
 
                 </div>
@@ -705,6 +791,7 @@ body {
                 <div class="info">
 
                     <div class="info-row">
+
                         <div class="info-label">
                             Description
                         </div>
@@ -712,9 +799,12 @@ body {
                         <div class="info-value">
                             Earn recognition by fulfilling the requirements associated with the Constitutio trophy.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Requirements
                         </div>
@@ -722,9 +812,12 @@ body {
                         <div class="info-value">
                             [PLACEHOLDER — ADD REQUIREMENT]
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Difficulty
                         </div>
@@ -742,6 +835,7 @@ body {
                             Medium
 
                         </div>
+
                     </div>
 
                 </div>
@@ -784,6 +878,7 @@ body {
                 <div class="info">
 
                     <div class="info-row">
+
                         <div class="info-label">
                             Description
                         </div>
@@ -791,9 +886,12 @@ body {
                         <div class="info-value">
                             Discover what lies beyond the ordinary and earn the Perditus trophy.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Requirements
                         </div>
@@ -801,9 +899,12 @@ body {
                         <div class="info-value">
                             [PLACEHOLDER — ADD REQUIREMENT]
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Difficulty
                         </div>
@@ -821,6 +922,7 @@ body {
                             Hard
 
                         </div>
+
                     </div>
 
                 </div>
@@ -863,6 +965,7 @@ body {
                 <div class="info">
 
                     <div class="info-row">
+
                         <div class="info-label">
                             Description
                         </div>
@@ -870,9 +973,12 @@ body {
                         <div class="info-value">
                             Demonstrate exceptional skill by remaining completely untouched during the required challenge.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Requirements
                         </div>
@@ -880,9 +986,12 @@ body {
                         <div class="info-value">
                             Complete the Untouchability challenge without being hit.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Difficulty
                         </div>
@@ -900,6 +1009,7 @@ body {
                             Legendary
 
                         </div>
+
                     </div>
 
                 </div>
@@ -942,6 +1052,7 @@ body {
                 <div class="info">
 
                     <div class="info-row">
+
                         <div class="info-label">
                             Description
                         </div>
@@ -949,9 +1060,12 @@ body {
                         <div class="info-value">
                             Build a reputation worthy of recognition throughout the game.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Requirements
                         </div>
@@ -959,9 +1073,12 @@ body {
                         <div class="info-value">
                             Reputation: 7,000
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Difficulty
                         </div>
@@ -979,6 +1096,7 @@ body {
                             Medium
 
                         </div>
+
                     </div>
 
                 </div>
@@ -1021,6 +1139,7 @@ body {
                 <div class="info">
 
                     <div class="info-row">
+
                         <div class="info-label">
                             Description
                         </div>
@@ -1028,9 +1147,12 @@ body {
                         <div class="info-value">
                             Become a master of the kitchen by preparing an impressive number of meals.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Requirements
                         </div>
@@ -1038,9 +1160,12 @@ body {
                         <div class="info-value">
                             Cooked Meals: 50
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Difficulty
                         </div>
@@ -1058,6 +1183,7 @@ body {
                             Medium
 
                         </div>
+
                     </div>
 
                 </div>
@@ -1100,6 +1226,7 @@ body {
                 <div class="info">
 
                     <div class="info-row">
+
                         <div class="info-label">
                             Description
                         </div>
@@ -1107,9 +1234,12 @@ body {
                         <div class="info-value">
                             Reach the highest level of achievement by collecting nearly every trophy available in Disorderly Suthton.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Requirements
                         </div>
@@ -1123,9 +1253,12 @@ body {
                             <br>
                             • [PLACEHOLDER TROPHY]
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Difficulty
                         </div>
@@ -1143,6 +1276,7 @@ body {
                             Legendary
 
                         </div>
+
                     </div>
 
                 </div>
@@ -1206,6 +1340,7 @@ body {
                 <div class="info">
 
                     <div class="info-row">
+
                         <div class="info-label">
                             Description
                         </div>
@@ -1213,9 +1348,12 @@ body {
                         <div class="info-value">
                             Recognizes players who consistently support and contribute positively to the Disorderly Suthton community.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Requirements
                         </div>
@@ -1223,9 +1361,12 @@ body {
                         <div class="info-value">
                             [PLACEHOLDER — ADD COMMUNITY REQUIREMENT]
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Difficulty
                         </div>
@@ -1243,6 +1384,7 @@ body {
                             Medium
 
                         </div>
+
                     </div>
 
                 </div>
@@ -1285,6 +1427,7 @@ body {
                 <div class="info">
 
                     <div class="info-row">
+
                         <div class="info-label">
                             Description
                         </div>
@@ -1292,9 +1435,12 @@ body {
                         <div class="info-value">
                             Awarded to players who demonstrate exceptional performance within Disorderly Suthton.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Requirements
                         </div>
@@ -1302,9 +1448,12 @@ body {
                         <div class="info-value">
                             [PLACEHOLDER — SPECIAL AWARD CRITERIA]
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Difficulty
                         </div>
@@ -1322,6 +1471,7 @@ body {
                             Legendary
 
                         </div>
+
                     </div>
 
                 </div>
@@ -1364,6 +1514,7 @@ body {
                 <div class="info">
 
                     <div class="info-row">
+
                         <div class="info-label">
                             Description
                         </div>
@@ -1371,9 +1522,12 @@ body {
                         <div class="info-value">
                             A special recognition for people who have made meaningful contributions to Disorderly Suthton.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Requirements
                         </div>
@@ -1381,9 +1535,12 @@ body {
                         <div class="info-value">
                             Granted to recognized contributors and members of the development team.
                         </div>
+
                     </div>
 
+
                     <div class="info-row">
+
                         <div class="info-label">
                             Difficulty
                         </div>
@@ -1401,6 +1558,7 @@ body {
                             Special
 
                         </div>
+
                     </div>
 
                 </div>
@@ -1414,7 +1572,7 @@ body {
 
 
     <!-- =========================
-         WIKI NOTE
+         BOTTOM WIKI INFORMATION
     ========================= -->
 
     <div class="wiki-note">
@@ -1442,6 +1600,7 @@ body {
 >
     DISCORD
 </a>
+
 
 </body>
 </html>
