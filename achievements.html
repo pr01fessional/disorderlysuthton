@@ -1,1571 +1,1701 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Achievements — Disorderly Suthton</title>
+  <title>Achievements - Disorderly Suthton</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Damion&family=Roboto+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Damion&family=Roboto+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
 
-<style>
-
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-}
-
-body {
-    font-family: 'Roboto Condensed', sans-serif;
-    color: white;
-
-    background-image:
-        linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.38)),
-        url('safeAThome.png');
-
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    min-height: 100vh;
-
-    padding: 55px 40px 100px;
-}
-
-
-/* =========================
-   TOP LOGO
-========================= */
-
-.logo {
-    position: fixed;
-
-    top: 28px;
-    right: 32px;
-
-    width: 135px;
-    height: auto;
-
-    z-index: 100;
-
-    transition: opacity 0.25s ease;
-}
-
-.logo:hover {
-    opacity: 0.65;
-}
-
-
-/* =========================
-   BACK BUTTON
-========================= */
-
-.back-button {
-    position: fixed;
-
-    top: 32px;
-    left: 32px;
-
-    padding: 8px 15px;
-
-    color: white;
-    text-decoration: none;
-
-    font-family: 'Roboto Condensed', sans-serif;
-
-    font-size: 16px;
-    font-weight: 600;
-
-    letter-spacing: 0.8px;
-
-    background: rgba(0,0,0,0.35);
-
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-
-    border: 1px solid rgba(255,255,255,0.18);
-
-    border-radius: 10px;
-
-    transition:
-        background 0.25s ease,
-        backdrop-filter 0.25s ease,
-        transform 0.25s ease;
-}
-
-.back-button:hover {
-    background: rgba(0,0,0,0.55);
-
-    backdrop-filter: blur(13px);
-    -webkit-backdrop-filter: blur(13px);
-
-    transform: translateX(-2px);
-}
-
-
-/* =========================
-   MAIN CONTAINER
-========================= */
-
-.container {
-    width: min(1180px, 100%);
-
-    margin: 0 auto;
-}
-
-
-/* =========================
-   TITLE
-========================= */
-
-.page-title {
-    text-align: center;
-
-    font-family: 'Roboto Condensed', sans-serif;
-
-    font-size: 64px;
-    font-weight: 600;
-
-    margin: 15px 0 5px;
-
-    letter-spacing: 1px;
-
-    text-shadow:
-        0 3px 10px rgba(0,0,0,0.7);
-}
-
-
-/* =========================
-   SUBTITLE
-========================= */
-
-.page-subtitle {
-    text-align: center;
-
-    font-family: 'Damion', cursive;
-
-    font-size: 27px;
-
-    margin: 0 0 12px;
-
-    opacity: 0.95;
-
-    text-shadow:
-        0 2px 8px rgba(0,0,0,0.7);
-}
-
-
-/* =========================
-   PAGE DESCRIPTION
-========================= */
-
-.page-description {
-    width: min(750px, 100%);
-
-    margin: 0 auto 32px;
-
-    text-align: center;
-
-    font-size: 16px;
-
-    line-height: 1.45;
-
-    opacity: 0.78;
-
-    text-shadow:
-        0 2px 6px rgba(0,0,0,0.65);
-}
-
-
-/* =========================
-   DIVIDER
-========================= */
-
-.divider {
-    width: 90%;
-    max-width: 1000px;
-
-    height: 1px;
-
-    background: rgba(255,255,255,0.35);
-
-    margin: 30px auto 38px;
-}
-
-
-/* =========================
-   SECTION TITLES
-========================= */
-
-.section-title {
-    font-family: 'Damion', cursive;
-
-    font-size: 36px;
-
-    text-align: center;
-
-    margin: 32px 0 6px;
-
-    text-shadow:
-        0 2px 8px rgba(0,0,0,0.7);
-}
-
-.section-description {
-    text-align: center;
-
-    font-size: 16px;
-
-    opacity: 0.78;
-
-    margin-bottom: 27px;
-}
-
-
-/* =========================
-   ACHIEVEMENT GRID
-========================= */
-
-.achievement-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 21px;
-
-    width: 100%;
-}
-
-
-/* =========================
-   ACHIEVEMENT CARD
-========================= */
-
-.achievement-card {
-    position: relative;
-
-    background: rgba(0,0,0,0.40);
-
-    border: 1px solid rgba(255,255,255,0.16);
-
-    border-radius: 14px;
-
-    overflow: hidden;
-
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-
-    box-shadow:
-        0 8px 22px rgba(0,0,0,0.30);
-
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        backdrop-filter 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.achievement-card:hover {
-    transform: translateY(-4px);
-
-    background: rgba(0,0,0,0.55);
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,0.45);
-}
-
-
-/* =========================
-   ACHIEVEMENT IMAGE
-========================= */
-
-.achievement-image-container {
-    width: 100%;
-
-    aspect-ratio: 1 / 1;
-
-    background: rgba(0,0,0,0.38);
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-}
-
-.achievement-image {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    display: block;
-
-    filter:
-        drop-shadow(0 7px 10px rgba(0,0,0,0.45));
-
-    transition:
-        transform 0.25s ease;
-}
-
-.achievement-card:hover .achievement-image {
-    transform: scale(1.035);
-}
-
-
-/* =========================
-   CARD CONTENT
-========================= */
-
-.achievement-content {
-    padding: 16px 18px 18px;
-}
-
-.achievement-name {
-    font-size: 25px;
-
-    font-weight: 600;
-
-    margin-bottom: 8px;
-
-    text-shadow:
-        0 2px 5px rgba(0,0,0,0.6);
-}
-
-
-/* =========================
-   BADGES
-========================= */
-
-.badges {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 6px;
-
-    margin-bottom: 13px;
-}
-
-.badge {
-    display: inline-block;
-
-    padding: 4px 8px;
-
-    border-radius: 7px;
-
-    background: rgba(255,255,255,0.12);
-
-    border: 1px solid rgba(255,255,255,0.16);
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    letter-spacing: 0.45px;
-
-    text-transform: uppercase;
-}
-
-.badge.obtainable {
-    background: rgba(80,180,100,0.22);
-}
-
-.badge.unobtainable {
-    background: rgba(190,70,70,0.25);
-}
-
-
-/* =========================
-   INFO
-========================= */
-
-.info {
-    margin-top: 8px;
-}
-
-.info-row {
-    margin-bottom: 11px;
-}
-
-.info-label {
-    font-weight: 700;
-
-    font-size: 14px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.5px;
-
-    opacity: 0.72;
-
-    margin-bottom: 2px;
-}
-
-.info-value {
-    font-size: 16px;
-
-    line-height: 1.35;
-}
-
-
-/* =========================
-   DIFFICULTY
-========================= */
-
-.difficulty {
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    font-size: 16px;
-}
-
-.difficulty-dots {
-    display: flex;
-
-    gap: 3px;
-}
-
-.dot {
-    width: 8px;
-    height: 8px;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,0.22);
-}
-
-.dot.active {
-    background: rgba(255,255,255,0.9);
-}
-
-
-/* =========================
-   WIKI NOTE
-========================= */
-
-.wiki-note {
-    width: min(900px, 100%);
-
-    margin: 42px auto 20px;
-
-    padding: 17px 21px;
-
-    background: rgba(0,0,0,0.34);
-
-    border: 1px solid rgba(255,255,255,0.14);
-
-    border-radius: 13px;
-
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-
-    text-align: center;
-
-    font-size: 15px;
-
-    line-height: 1.5;
-
-    opacity: 0.9;
-}
-
-
-/* =========================
-   DISCORD
-========================= */
-
-.discord-button {
-    position: fixed;
-
-    bottom: 22px;
-    right: 25px;
-
-    padding: 8px 14px;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-family: 'Roboto Condensed', sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    background: rgba(0,0,0,0.42);
-
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-
-    border: 1px solid rgba(255,255,255,0.16);
-
-    border-radius: 9px;
-
-    transition:
-        background 0.25s ease,
-        backdrop-filter 0.25s ease;
-}
-
-.discord-button:hover {
-    background: rgba(0,0,0,0.62);
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 950px) {
-
-    .achievement-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-}
 
-
-@media (max-width: 650px) {
+    /* =========================
+       BODY / BACKGROUND
+       ========================= */
 
     body {
-        padding:
-            90px 18px 85px;
+      min-height: 100vh;
+
+      font-family: "Roboto Condensed", sans-serif;
+
+      color: white;
+
+      background-image:
+        linear-gradient(
+          rgba(0,0,0,0.50),
+          rgba(0,0,0,0.50)
+        ),
+        url("safeAThome.png");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+
+    /* =========================
+       TOP RIGHT LOGO
+       ========================= */
+
+    .logo-link {
+      position: absolute;
+
+      top: 28px;
+      right: 32px;
+
+      display: block;
+
+      line-height: 0;
+
+      z-index: 9999;
     }
 
     .logo {
-        width: 95px;
+      width: 135px;
 
-        top: 18px;
-        right: 18px;
+      filter:
+        drop-shadow(
+          0 4px 10px rgba(0,0,0,0.7)
+        );
+
+      transition: opacity 0.2s ease;
     }
+
+    .logo-link:hover .logo {
+      opacity: 0.65;
+    }
+
+
+    /* =========================
+       BACK BUTTON
+       ========================= */
 
     .back-button {
-        top: 18px;
-        left: 18px;
+      position: absolute;
 
-        font-size: 15px;
+      top: 30px;
+      left: 30px;
 
-        padding: 7px 12px;
+      padding: 9px 17px;
+
+      color: white;
+
+      text-decoration: none;
+
+      font-size: 15px;
+      font-weight: 800;
+
+      letter-spacing: 0.5px;
+
+      border: 1px solid rgba(255,255,255,0.5);
+
+      border-radius: 8px;
+
+      background: rgba(0,0,0,0.35);
+
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+
+      box-shadow:
+        0 4px 12px rgba(0,0,0,0.4);
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        backdrop-filter 0.2s ease;
+
+      z-index: 9999;
     }
 
-    .page-title {
-        font-size: 46px;
+    .back-button:hover {
+      transform: translateY(-2px);
+
+      background: rgba(0,0,0,0.55);
+
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
-    .page-subtitle {
-        font-size: 23px;
+
+    /* =========================
+       DISCORD BUTTON
+       ========================= */
+
+    .discord {
+      position: fixed;
+
+      right: 22px;
+      bottom: 18px;
+
+      height: 29px;
+
+      padding: 0 12px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-family: "Roboto Condensed", sans-serif;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: 1.3px;
+
+      color: white;
+
+      text-decoration: none;
+
+      border: 1px solid rgba(255,255,255,0.5);
+
+      border-radius: 7px;
+
+      background: rgba(0,0,0,0.38);
+
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+
+      box-shadow:
+        0 4px 12px rgba(0,0,0,0.4);
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        backdrop-filter 0.2s ease;
+
+      z-index: 9999;
     }
+
+    .discord:hover {
+      transform: translateY(-2px);
+
+      background: rgba(0,0,0,0.55);
+
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+
+    /* =========================
+       MAIN PAGE
+       ========================= */
+
+    .page {
+      width: 100%;
+
+      min-height: 100vh;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      padding: 115px 30px 80px;
+    }
+
+
+    /* =========================
+       TITLE
+       ========================= */
+
+    .title {
+      font-family: "Roboto Condensed", sans-serif;
+
+      font-size: clamp(48px, 7vw, 78px);
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      text-align: center;
+
+      text-shadow:
+        0 4px 15px rgba(0,0,0,0.8);
+    }
+
+
+    /* =========================
+       SUBTITLE
+       ========================= */
+
+    .subtitle {
+      margin-top: 4px;
+
+      font-family: "Damion", cursive;
+
+      font-size: 27px;
+
+      text-align: center;
+
+      opacity: 0.9;
+
+      text-shadow:
+        0 3px 10px rgba(0,0,0,0.8);
+    }
+
+
+    /* =========================
+       PAGE DESCRIPTION
+       ========================= */
 
     .page-description {
-        font-size: 15px;
+      width: min(700px, 90vw);
+
+      margin-top: 10px;
+
+      font-size: 16px;
+
+      line-height: 1.45;
+
+      font-weight: 500;
+
+      text-align: center;
+
+      opacity: 0.78;
+
+      text-shadow:
+        0 2px 7px rgba(0,0,0,0.8);
     }
+
+
+    /* =========================
+       DIVIDERS
+       ========================= */
+
+    .line {
+      width: min(850px, 85vw);
+
+      height: 1px;
+
+      background: rgba(255,255,255,0.65);
+
+      margin-top: 18px;
+      margin-bottom: 30px;
+
+      box-shadow:
+        0 2px 8px rgba(0,0,0,0.5);
+    }
+
+
+    /* =========================
+       SECTION TITLES
+       ========================= */
+
+    .section-title {
+      font-family: "Damion", cursive;
+
+      font-size: 36px;
+
+      text-align: center;
+
+      margin-bottom: 5px;
+
+      text-shadow:
+        0 3px 10px rgba(0,0,0,0.8);
+    }
+
+
+    .section-description {
+      width: min(700px, 90vw);
+
+      margin-bottom: 24px;
+
+      font-size: 15px;
+
+      line-height: 1.4;
+
+      text-align: center;
+
+      opacity: 0.78;
+
+      text-shadow:
+        0 2px 7px rgba(0,0,0,0.8);
+    }
+
+
+    /* =========================
+       ACHIEVEMENT GRID
+       ========================= */
 
     .achievement-grid {
-        grid-template-columns: 1fr;
+      width: min(850px, 90vw);
 
-        gap: 18px;
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 16px;
     }
+
+
+    /* =========================
+       ACHIEVEMENT CARD
+       ========================= */
+
+    .achievement-card {
+      position: relative;
+
+      display: flex;
+
+      flex-direction: column;
+
+      overflow: hidden;
+
+      color: white;
+
+      text-decoration: none;
+
+      background: rgba(0,0,0,0.40);
+
+      border: 1px solid rgba(255,255,255,0.45);
+
+      border-radius: 11px;
+
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+
+      box-shadow:
+        0 5px 15px rgba(0,0,0,0.45);
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        backdrop-filter 0.2s ease;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-4px);
+
+      background: rgba(0,0,0,0.55);
+
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+    }
+
+
+    /* =========================
+       ACHIEVEMENT IMAGE
+       ========================= */
+
+    .achievement-image-container {
+      width: 100%;
+
+      aspect-ratio: 1 / 1;
+
+      overflow: hidden;
+
+      background: rgba(0,0,0,0.42);
+    }
+
+
+    .achievement-image {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+
+      display: block;
+
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+    }
+
+
+    .achievement-card:hover .achievement-image {
+      transform: scale(1.035);
+
+      opacity: 0.82;
+    }
+
+
+    /* =========================
+       ACHIEVEMENT CONTENT
+       ========================= */
+
+    .achievement-content {
+      padding: 13px 14px 15px;
+    }
+
 
     .achievement-name {
-        font-size: 24px;
+      font-size: 22px;
+
+      font-weight: 800;
+
+      margin-bottom: 7px;
+
+      text-align: left;
+
+      text-shadow:
+        0 2px 7px rgba(0,0,0,0.9);
     }
 
-}
 
-</style>
+    /* =========================
+       BADGES
+       ========================= */
+
+    .badges {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 5px;
+
+      margin-bottom: 10px;
+    }
+
+
+    .badge {
+      display: inline-block;
+
+      padding: 3px 7px;
+
+      border-radius: 6px;
+
+      background: rgba(255,255,255,0.12);
+
+      border: 1px solid rgba(255,255,255,0.18);
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 0.4px;
+
+      text-transform: uppercase;
+    }
+
+
+    .badge.obtainable {
+      background: rgba(80,180,100,0.22);
+    }
+
+
+    .badge.unobtainable {
+      background: rgba(190,70,70,0.25);
+    }
+
+
+    /* =========================
+       INFORMATION
+       ========================= */
+
+    .info {
+      margin-top: 5px;
+    }
+
+
+    .info-row {
+      margin-bottom: 9px;
+    }
+
+
+    .info-label {
+      font-weight: 800;
+
+      font-size: 12px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.5px;
+
+      opacity: 0.7;
+
+      margin-bottom: 2px;
+    }
+
+
+    .info-value {
+      font-size: 14px;
+
+      line-height: 1.35;
+
+      font-weight: 500;
+    }
+
+
+    /* =========================
+       DIFFICULTY
+       ========================= */
+
+    .difficulty {
+      display: flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      font-size: 14px;
+
+      font-weight: 600;
+    }
+
+
+    .difficulty-dots {
+      display: flex;
+
+      gap: 3px;
+    }
+
+
+    .dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,0.22);
+    }
+
+
+    .dot.active {
+      background: rgba(255,255,255,0.9);
+    }
+
+
+    /* =========================
+       BOTTOM WIKI INFORMATION
+       ========================= */
+
+    .wiki-note {
+      width: min(850px, 90vw);
+
+      margin-top: 35px;
+
+      padding: 16px 22px;
+
+      border: 1px solid rgba(255,255,255,0.45);
+
+      border-radius: 10px;
+
+      background: rgba(0,0,0,0.32);
+
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+
+      box-shadow:
+        0 5px 15px rgba(0,0,0,0.4);
+
+      text-align: center;
+
+      font-size: 14px;
+
+      line-height: 1.5;
+
+      opacity: 0.9;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 800px) {
+
+      .logo-link {
+        top: 20px;
+        right: 20px;
+      }
+
+      .logo {
+        width: 105px;
+      }
+
+      .back-button {
+        top: 20px;
+        left: 20px;
+      }
+
+      .page {
+        padding-top: 125px;
+      }
+
+      .achievement-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+
+        width: min(650px, 90vw);
+      }
+
+    }
+
+
+    @media (max-width: 500px) {
+
+      .achievement-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-description {
+        font-size: 15px;
+      }
+
+      .achievement-name {
+        font-size: 23px;
+      }
+
+      .achievement-content {
+        padding: 14px 15px 16px;
+      }
+
+      .wiki-note {
+        padding: 15px;
+      }
+
+    }
+
+  </style>
 </head>
+
 
 <body>
 
 
-<!-- =========================
-     LOGO
-========================= -->
+  <!-- =========================
+       BACK BUTTON
+       ========================= -->
 
-<a
+  <a
+    class="back-button"
+    href="index.html"
+  >
+    ◂ BACK
+  </a>
+
+
+  <!-- =========================
+       GAME LOGO
+       ========================= -->
+
+  <a
+    class="logo-link"
     href="https://www.roblox.com/games/121760921831203"
     target="_blank"
->
+    rel="noopener noreferrer"
+  >
+
     <img
-        src="ds_logo.png"
-        class="logo"
-        alt="Disorderly Suthton Logo"
+      class="logo"
+      src="ds_logo.png"
+      alt="Disorderly Suthton Logo"
     >
-</a>
+
+  </a>
 
 
-<!-- =========================
-     BACK BUTTON
-========================= -->
+  <!-- =========================
+       PAGE
+       ========================= -->
 
-<a
-    href="index.html"
-    class="back-button"
->
-    ◂ BACK
-</a>
+  <main class="page">
 
 
-<div class="container">
+    <!-- TITLE -->
 
-
-    <!-- =========================
-         TITLE
-    ========================= -->
-
-    <h1 class="page-title">
-        Achievements
+    <h1 class="title">
+      Achievements
     </h1>
 
 
-    <div class="page-subtitle">
-        Trophies, awards and accomplishments
+    <!-- SUBTITLE -->
+
+    <div class="subtitle">
+      Trophies, awards and accomplishments
     </div>
 
+
+    <!-- DESCRIPTION -->
 
     <div class="page-description">
-        Trophies and awards can be viewed in owned apartments or
-        commercial properties. This page documents the achievements
-        currently available in Disorderly Suthton, including their
-        requirements, availability and difficulty.
+      Trophies and awards can be viewed in owned apartments or
+      commercial properties. This page documents the achievements
+      currently available in Disorderly Suthton, including their
+      requirements, availability and difficulty.
     </div>
 
 
-    <div class="divider"></div>
+    <div class="line"></div>
 
 
     <!-- =========================
          TROPHIES
-    ========================= -->
+         ========================= -->
 
     <div class="section-title">
-        Trophies
+      Trophies
     </div>
 
+
     <div class="section-description">
-        Permanent achievements earned by completing specific objectives in Disorderly Suthton.
+      Permanent achievements earned by completing specific objectives in Disorderly Suthton.
     </div>
 
 
     <div class="achievement-grid">
 
 
-        <!-- MASTERMIND -->
+      <!-- MASTERMIND -->
 
-        <div class="achievement-card">
+      <div class="achievement-card">
 
-            <div class="achievement-image-container">
-                <img
-                    src="trophy_mastermind.png"
-                    class="achievement-image"
-                    alt="Mastermind Trophy"
-                >
-            </div>
+        <div class="achievement-image-container">
 
-            <div class="achievement-content">
-
-                <div class="achievement-name">
-                    Mastermind
-                </div>
-
-                <div class="badges">
-
-                    <span class="badge">
-                        Trophy
-                    </span>
-
-                    <span class="badge obtainable">
-                        Obtainable
-                    </span>
-
-                </div>
-
-                <div class="info">
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Description
-                        </div>
-
-                        <div class="info-value">
-                            Prove that you can think several steps ahead and successfully complete the required challenge.
-                        </div>
-
-                    </div>
-
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Requirements
-                        </div>
-
-                        <div class="info-value">
-                            Complete the Mastermind challenge.
-                        </div>
-
-                    </div>
-
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Difficulty
-                        </div>
-
-                        <div class="difficulty">
-
-                            <div class="difficulty-dots">
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                            </div>
-
-                            Hard
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+          <img
+            class="achievement-image"
+            src="trophy_mastermind.png"
+            alt="Mastermind Trophy"
+          >
 
         </div>
 
 
-        <!-- CONSTITUTIO -->
+        <div class="achievement-content">
 
-        <div class="achievement-card">
-
-            <div class="achievement-image-container">
-                <img
-                    src="trophy_constitutio.png"
-                    class="achievement-image"
-                    alt="Constitutio Trophy"
-                >
-            </div>
-
-            <div class="achievement-content">
-
-                <div class="achievement-name">
-                    Constitutio
-                </div>
-
-                <div class="badges">
-
-                    <span class="badge">
-                        Trophy
-                    </span>
-
-                    <span class="badge obtainable">
-                        Obtainable
-                    </span>
-
-                </div>
-
-                <div class="info">
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Description
-                        </div>
-
-                        <div class="info-value">
-                            Earn recognition by fulfilling the requirements associated with the Constitutio trophy.
-                        </div>
-
-                    </div>
+          <div class="achievement-name">
+            Mastermind
+          </div>
 
 
-                    <div class="info-row">
+          <div class="badges">
 
-                        <div class="info-label">
-                            Requirements
-                        </div>
+            <span class="badge">
+              Trophy
+            </span>
 
-                        <div class="info-value">
-                            [PLACEHOLDER — ADD REQUIREMENT]
-                        </div>
+            <span class="badge obtainable">
+              Obtainable
+            </span>
 
-                    </div>
+          </div>
 
 
-                    <div class="info-row">
+          <div class="info">
 
-                        <div class="info-label">
-                            Difficulty
-                        </div>
+            <div class="info-row">
 
-                        <div class="difficulty">
+              <div class="info-label">
+                Description
+              </div>
 
-                            <div class="difficulty-dots">
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
-
-                            Medium
-
-                        </div>
-
-                    </div>
-
-                </div>
+              <div class="info-value">
+                Prove that you can think several steps ahead and successfully complete the required challenge.
+              </div>
 
             </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Requirements
+              </div>
+
+              <div class="info-value">
+                Complete the Mastermind challenge.
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Difficulty
+              </div>
+
+              <div class="difficulty">
+
+                <div class="difficulty-dots">
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                </div>
+
+                Hard
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONSTITUTIO -->
+
+      <div class="achievement-card">
+
+        <div class="achievement-image-container">
+
+          <img
+            class="achievement-image"
+            src="trophy_constitutio.png"
+            alt="Constitutio Trophy"
+          >
 
         </div>
 
 
-        <!-- PERDITUS -->
+        <div class="achievement-content">
 
-        <div class="achievement-card">
-
-            <div class="achievement-image-container">
-                <img
-                    src="trophy_perditus.png"
-                    class="achievement-image"
-                    alt="Perditus Trophy"
-                >
-            </div>
-
-            <div class="achievement-content">
-
-                <div class="achievement-name">
-                    Perditus
-                </div>
-
-                <div class="badges">
-
-                    <span class="badge">
-                        Trophy
-                    </span>
-
-                    <span class="badge obtainable">
-                        Obtainable
-                    </span>
-
-                </div>
-
-                <div class="info">
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Description
-                        </div>
-
-                        <div class="info-value">
-                            Discover what lies beyond the ordinary and earn the Perditus trophy.
-                        </div>
-
-                    </div>
+          <div class="achievement-name">
+            Constitutio
+          </div>
 
 
-                    <div class="info-row">
+          <div class="badges">
 
-                        <div class="info-label">
-                            Requirements
-                        </div>
+            <span class="badge">
+              Trophy
+            </span>
 
-                        <div class="info-value">
-                            [PLACEHOLDER — ADD REQUIREMENT]
-                        </div>
+            <span class="badge obtainable">
+              Obtainable
+            </span>
 
-                    </div>
+          </div>
 
 
-                    <div class="info-row">
+          <div class="info">
 
-                        <div class="info-label">
-                            Difficulty
-                        </div>
+            <div class="info-row">
 
-                        <div class="difficulty">
+              <div class="info-label">
+                Description
+              </div>
 
-                            <div class="difficulty-dots">
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                            </div>
-
-                            Hard
-
-                        </div>
-
-                    </div>
-
-                </div>
+              <div class="info-value">
+                Earn recognition by fulfilling the requirements associated with the Constitutio trophy.
+              </div>
 
             </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Requirements
+              </div>
+
+              <div class="info-value">
+                [PLACEHOLDER — ADD REQUIREMENT]
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Difficulty
+              </div>
+
+              <div class="difficulty">
+
+                <div class="difficulty-dots">
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+
+                Medium
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PERDITUS -->
+
+      <div class="achievement-card">
+
+        <div class="achievement-image-container">
+
+          <img
+            class="achievement-image"
+            src="trophy_perditus.png"
+            alt="Perditus Trophy"
+          >
 
         </div>
 
 
-        <!-- UNTOUCHABILITY -->
+        <div class="achievement-content">
 
-        <div class="achievement-card">
-
-            <div class="achievement-image-container">
-                <img
-                    src="trophy_untouchability.png"
-                    class="achievement-image"
-                    alt="Untouchability Trophy"
-                >
-            </div>
-
-            <div class="achievement-content">
-
-                <div class="achievement-name">
-                    Untouchability
-                </div>
-
-                <div class="badges">
-
-                    <span class="badge">
-                        Trophy
-                    </span>
-
-                    <span class="badge obtainable">
-                        Obtainable
-                    </span>
-
-                </div>
-
-                <div class="info">
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Description
-                        </div>
-
-                        <div class="info-value">
-                            Demonstrate exceptional skill by remaining completely untouched during the required challenge.
-                        </div>
-
-                    </div>
+          <div class="achievement-name">
+            Perditus
+          </div>
 
 
-                    <div class="info-row">
+          <div class="badges">
 
-                        <div class="info-label">
-                            Requirements
-                        </div>
+            <span class="badge">
+              Trophy
+            </span>
 
-                        <div class="info-value">
-                            Complete the Untouchability challenge without being hit.
-                        </div>
+            <span class="badge obtainable">
+              Obtainable
+            </span>
 
-                    </div>
+          </div>
 
 
-                    <div class="info-row">
+          <div class="info">
 
-                        <div class="info-label">
-                            Difficulty
-                        </div>
+            <div class="info-row">
 
-                        <div class="difficulty">
+              <div class="info-label">
+                Description
+              </div>
 
-                            <div class="difficulty-dots">
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                            </div>
-
-                            Legendary
-
-                        </div>
-
-                    </div>
-
-                </div>
+              <div class="info-value">
+                Discover what lies beyond the ordinary and earn the Perditus trophy.
+              </div>
 
             </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Requirements
+              </div>
+
+              <div class="info-value">
+                [PLACEHOLDER — ADD REQUIREMENT]
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Difficulty
+              </div>
+
+              <div class="difficulty">
+
+                <div class="difficulty-dots">
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                </div>
+
+                Hard
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- UNTOUCHABILITY -->
+
+      <div class="achievement-card">
+
+        <div class="achievement-image-container">
+
+          <img
+            class="achievement-image"
+            src="trophy_untouchability.png"
+            alt="Untouchability Trophy"
+          >
 
         </div>
 
 
-        <!-- REPUTATION -->
+        <div class="achievement-content">
 
-        <div class="achievement-card">
-
-            <div class="achievement-image-container">
-                <img
-                    src="trophy_reputation.png"
-                    class="achievement-image"
-                    alt="Reputation Trophy"
-                >
-            </div>
-
-            <div class="achievement-content">
-
-                <div class="achievement-name">
-                    Reputation
-                </div>
-
-                <div class="badges">
-
-                    <span class="badge">
-                        Trophy
-                    </span>
-
-                    <span class="badge obtainable">
-                        Obtainable
-                    </span>
-
-                </div>
-
-                <div class="info">
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Description
-                        </div>
-
-                        <div class="info-value">
-                            Build a reputation worthy of recognition throughout the game.
-                        </div>
-
-                    </div>
+          <div class="achievement-name">
+            Untouchability
+          </div>
 
 
-                    <div class="info-row">
+          <div class="badges">
 
-                        <div class="info-label">
-                            Requirements
-                        </div>
+            <span class="badge">
+              Trophy
+            </span>
 
-                        <div class="info-value">
-                            Reputation: 7,000
-                        </div>
+            <span class="badge obtainable">
+              Obtainable
+            </span>
 
-                    </div>
+          </div>
 
 
-                    <div class="info-row">
+          <div class="info">
 
-                        <div class="info-label">
-                            Difficulty
-                        </div>
+            <div class="info-row">
 
-                        <div class="difficulty">
+              <div class="info-label">
+                Description
+              </div>
 
-                            <div class="difficulty-dots">
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
-
-                            Medium
-
-                        </div>
-
-                    </div>
-
-                </div>
+              <div class="info-value">
+                Demonstrate exceptional skill by remaining completely untouched during the required challenge.
+              </div>
 
             </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Requirements
+              </div>
+
+              <div class="info-value">
+                Complete the Untouchability challenge without being hit.
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Difficulty
+              </div>
+
+              <div class="difficulty">
+
+                <div class="difficulty-dots">
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                </div>
+
+                Legendary
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- REPUTATION -->
+
+      <div class="achievement-card">
+
+        <div class="achievement-image-container">
+
+          <img
+            class="achievement-image"
+            src="trophy_reputation.png"
+            alt="Reputation Trophy"
+          >
 
         </div>
 
 
-        <!-- KITCHEN MASTERY -->
+        <div class="achievement-content">
 
-        <div class="achievement-card">
-
-            <div class="achievement-image-container">
-                <img
-                    src="trophy_kitchenmastery.png"
-                    class="achievement-image"
-                    alt="Kitchen Mastery Trophy"
-                >
-            </div>
-
-            <div class="achievement-content">
-
-                <div class="achievement-name">
-                    Kitchen Mastery
-                </div>
-
-                <div class="badges">
-
-                    <span class="badge">
-                        Trophy
-                    </span>
-
-                    <span class="badge obtainable">
-                        Obtainable
-                    </span>
-
-                </div>
-
-                <div class="info">
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Description
-                        </div>
-
-                        <div class="info-value">
-                            Become a master of the kitchen by preparing an impressive number of meals.
-                        </div>
-
-                    </div>
+          <div class="achievement-name">
+            Reputation
+          </div>
 
 
-                    <div class="info-row">
+          <div class="badges">
 
-                        <div class="info-label">
-                            Requirements
-                        </div>
+            <span class="badge">
+              Trophy
+            </span>
 
-                        <div class="info-value">
-                            Cooked Meals: 50
-                        </div>
+            <span class="badge obtainable">
+              Obtainable
+            </span>
 
-                    </div>
+          </div>
 
 
-                    <div class="info-row">
+          <div class="info">
 
-                        <div class="info-label">
-                            Difficulty
-                        </div>
+            <div class="info-row">
 
-                        <div class="difficulty">
+              <div class="info-label">
+                Description
+              </div>
 
-                            <div class="difficulty-dots">
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
-
-                            Medium
-
-                        </div>
-
-                    </div>
-
-                </div>
+              <div class="info-value">
+                Build a reputation worthy of recognition throughout the game.
+              </div>
 
             </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Requirements
+              </div>
+
+              <div class="info-value">
+                Reputation: 7,000
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Difficulty
+              </div>
+
+              <div class="difficulty">
+
+                <div class="difficulty-dots">
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+
+                Medium
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- KITCHEN MASTERY -->
+
+      <div class="achievement-card">
+
+        <div class="achievement-image-container">
+
+          <img
+            class="achievement-image"
+            src="trophy_kitchenmastery.png"
+            alt="Kitchen Mastery Trophy"
+          >
 
         </div>
 
 
-        <!-- MASTERY -->
+        <div class="achievement-content">
 
-        <div class="achievement-card">
-
-            <div class="achievement-image-container">
-                <img
-                    src="trophy_mastery.png"
-                    class="achievement-image"
-                    alt="Mastery Trophy"
-                >
-            </div>
-
-            <div class="achievement-content">
-
-                <div class="achievement-name">
-                    Mastery
-                </div>
-
-                <div class="badges">
-
-                    <span class="badge">
-                        Trophy
-                    </span>
-
-                    <span class="badge obtainable">
-                        Obtainable
-                    </span>
-
-                </div>
-
-                <div class="info">
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Description
-                        </div>
-
-                        <div class="info-value">
-                            Reach the highest level of achievement by collecting nearly every trophy available in Disorderly Suthton.
-                        </div>
-
-                    </div>
+          <div class="achievement-name">
+            Kitchen Mastery
+          </div>
 
 
-                    <div class="info-row">
+          <div class="badges">
 
-                        <div class="info-label">
-                            Requirements
-                        </div>
+            <span class="badge">
+              Trophy
+            </span>
 
-                        <div class="info-value">
-                            Obtain all trophies except:
-                            <br><br>
-                            • [PLACEHOLDER TROPHY]
-                            <br>
-                            • [PLACEHOLDER TROPHY]
-                            <br>
-                            • [PLACEHOLDER TROPHY]
-                        </div>
+            <span class="badge obtainable">
+              Obtainable
+            </span>
 
-                    </div>
+          </div>
 
 
-                    <div class="info-row">
+          <div class="info">
 
-                        <div class="info-label">
-                            Difficulty
-                        </div>
+            <div class="info-row">
 
-                        <div class="difficulty">
+              <div class="info-label">
+                Description
+              </div>
 
-                            <div class="difficulty-dots">
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                            </div>
-
-                            Legendary
-
-                        </div>
-
-                    </div>
-
-                </div>
+              <div class="info-value">
+                Become a master of the kitchen by preparing an impressive number of meals.
+              </div>
 
             </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Requirements
+              </div>
+
+              <div class="info-value">
+                Cooked Meals: 50
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Difficulty
+              </div>
+
+              <div class="difficulty">
+
+                <div class="difficulty-dots">
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+
+                Medium
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
+
+      </div>
+
+
+      <!-- MASTERY -->
+
+      <div class="achievement-card">
+
+        <div class="achievement-image-container">
+
+          <img
+            class="achievement-image"
+            src="trophy_mastery.png"
+            alt="Mastery Trophy"
+          >
+
+        </div>
+
+
+        <div class="achievement-content">
+
+          <div class="achievement-name">
+            Mastery
+          </div>
+
+
+          <div class="badges">
+
+            <span class="badge">
+              Trophy
+            </span>
+
+            <span class="badge obtainable">
+              Obtainable
+            </span>
+
+          </div>
+
+
+          <div class="info">
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Description
+              </div>
+
+              <div class="info-value">
+                Reach the highest level of achievement by collecting nearly every trophy available in Disorderly Suthton.
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Requirements
+              </div>
+
+              <div class="info-value">
+                Obtain all trophies except:
+                <br><br>
+                • [PLACEHOLDER TROPHY]
+                <br>
+                • [PLACEHOLDER TROPHY]
+                <br>
+                • [PLACEHOLDER TROPHY]
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Difficulty
+              </div>
+
+              <div class="difficulty">
+
+                <div class="difficulty-dots">
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                </div>
+
+                Legendary
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
 
     </div>
 
 
-    <div class="divider"></div>
+    <div class="line"></div>
 
 
     <!-- =========================
          AWARDS
-    ========================= -->
+         ========================= -->
 
     <div class="section-title">
-        Awards
+      Awards
     </div>
 
+
     <div class="section-description">
-        Special recognitions awarded for exceptional achievements or contributions.
+      Special recognitions awarded for exceptional achievements or contributions.
     </div>
 
 
     <div class="achievement-grid">
 
 
-        <!-- COMMUNITY DEDICATED -->
+      <!-- COMMUNITY DEDICATED -->
 
-        <div class="achievement-card">
+      <div class="achievement-card">
 
-            <div class="achievement-image-container">
-                <img
-                    src="award_communitydedicated.png"
-                    class="achievement-image"
-                    alt="Community Dedicated Award"
-                >
-            </div>
+        <div class="achievement-image-container">
 
-            <div class="achievement-content">
-
-                <div class="achievement-name">
-                    Community Dedicated
-                </div>
-
-                <div class="badges">
-
-                    <span class="badge">
-                        Community Award
-                    </span>
-
-                    <span class="badge obtainable">
-                        Obtainable
-                    </span>
-
-                </div>
-
-                <div class="info">
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Description
-                        </div>
-
-                        <div class="info-value">
-                            Recognizes players who consistently support and contribute positively to the Disorderly Suthton community.
-                        </div>
-
-                    </div>
-
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Requirements
-                        </div>
-
-                        <div class="info-value">
-                            [PLACEHOLDER — ADD COMMUNITY REQUIREMENT]
-                        </div>
-
-                    </div>
-
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Difficulty
-                        </div>
-
-                        <div class="difficulty">
-
-                            <div class="difficulty-dots">
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
-
-                            Medium
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+          <img
+            class="achievement-image"
+            src="award_communitydedicated.png"
+            alt="Community Dedicated Award"
+          >
 
         </div>
 
 
-        <!-- OUTSTANDING PERFORMANCE -->
+        <div class="achievement-content">
 
-        <div class="achievement-card">
-
-            <div class="achievement-image-container">
-                <img
-                    src="award_outstanding_performance.png"
-                    class="achievement-image"
-                    alt="Outstanding Performance Award"
-                >
-            </div>
-
-            <div class="achievement-content">
-
-                <div class="achievement-name">
-                    Outstanding Performance
-                </div>
-
-                <div class="badges">
-
-                    <span class="badge">
-                        Award
-                    </span>
-
-                    <span class="badge unobtainable">
-                        Special
-                    </span>
-
-                </div>
-
-                <div class="info">
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Description
-                        </div>
-
-                        <div class="info-value">
-                            Awarded to players who demonstrate exceptional performance within Disorderly Suthton.
-                        </div>
-
-                    </div>
+          <div class="achievement-name">
+            Community Dedicated
+          </div>
 
 
-                    <div class="info-row">
+          <div class="badges">
 
-                        <div class="info-label">
-                            Requirements
-                        </div>
+            <span class="badge">
+              Community Award
+            </span>
 
-                        <div class="info-value">
-                            [PLACEHOLDER — SPECIAL AWARD CRITERIA]
-                        </div>
+            <span class="badge obtainable">
+              Obtainable
+            </span>
 
-                    </div>
+          </div>
 
 
-                    <div class="info-row">
+          <div class="info">
 
-                        <div class="info-label">
-                            Difficulty
-                        </div>
+            <div class="info-row">
 
-                        <div class="difficulty">
+              <div class="info-label">
+                Description
+              </div>
 
-                            <div class="difficulty-dots">
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                            </div>
-
-                            Legendary
-
-                        </div>
-
-                    </div>
-
-                </div>
+              <div class="info-value">
+                Recognizes players who consistently support and contribute positively to the Disorderly Suthton community.
+              </div>
 
             </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Requirements
+              </div>
+
+              <div class="info-value">
+                [PLACEHOLDER — ADD COMMUNITY REQUIREMENT]
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Difficulty
+              </div>
+
+              <div class="difficulty">
+
+                <div class="difficulty-dots">
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+
+                Medium
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- OUTSTANDING PERFORMANCE -->
+
+      <div class="achievement-card">
+
+        <div class="achievement-image-container">
+
+          <img
+            class="achievement-image"
+            src="award_outstanding_performance.png"
+            alt="Outstanding Performance Award"
+          >
 
         </div>
 
 
-        <!-- CONTRIBUTION -->
+        <div class="achievement-content">
 
-        <div class="achievement-card">
-
-            <div class="achievement-image-container">
-                <img
-                    src="trophy_contribution.png"
-                    class="achievement-image"
-                    alt="Contribution Trophy"
-                >
-            </div>
-
-            <div class="achievement-content">
-
-                <div class="achievement-name">
-                    Contribution
-                </div>
-
-                <div class="badges">
-
-                    <span class="badge">
-                        Special Award
-                    </span>
-
-                    <span class="badge unobtainable">
-                        Special
-                    </span>
-
-                </div>
-
-                <div class="info">
-
-                    <div class="info-row">
-
-                        <div class="info-label">
-                            Description
-                        </div>
-
-                        <div class="info-value">
-                            A special recognition for people who have made meaningful contributions to Disorderly Suthton.
-                        </div>
-
-                    </div>
+          <div class="achievement-name">
+            Outstanding Performance
+          </div>
 
 
-                    <div class="info-row">
+          <div class="badges">
 
-                        <div class="info-label">
-                            Requirements
-                        </div>
+            <span class="badge">
+              Award
+            </span>
 
-                        <div class="info-value">
-                            Granted to recognized contributors and members of the development team.
-                        </div>
+            <span class="badge unobtainable">
+              Special
+            </span>
 
-                    </div>
+          </div>
 
 
-                    <div class="info-row">
+          <div class="info">
 
-                        <div class="info-label">
-                            Difficulty
-                        </div>
+            <div class="info-row">
 
-                        <div class="difficulty">
+              <div class="info-label">
+                Description
+              </div>
 
-                            <div class="difficulty-dots">
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                                <span class="dot active"></span>
-                            </div>
-
-                            Special
-
-                        </div>
-
-                    </div>
-
-                </div>
+              <div class="info-value">
+                Awarded to players who demonstrate exceptional performance within Disorderly Suthton.
+              </div>
 
             </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Requirements
+              </div>
+
+              <div class="info-value">
+                [PLACEHOLDER — SPECIAL AWARD CRITERIA]
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Difficulty
+              </div>
+
+              <div class="difficulty">
+
+                <div class="difficulty-dots">
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                </div>
+
+                Legendary
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
+
+      </div>
+
+
+      <!-- CONTRIBUTION -->
+
+      <div class="achievement-card">
+
+        <div class="achievement-image-container">
+
+          <img
+            class="achievement-image"
+            src="trophy_contribution.png"
+            alt="Contribution Trophy"
+          >
+
+        </div>
+
+
+        <div class="achievement-content">
+
+          <div class="achievement-name">
+            Contribution
+          </div>
+
+
+          <div class="badges">
+
+            <span class="badge">
+              Special Award
+            </span>
+
+            <span class="badge unobtainable">
+              Special
+            </span>
+
+          </div>
+
+
+          <div class="info">
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Description
+              </div>
+
+              <div class="info-value">
+                A special recognition for people who have made meaningful contributions to Disorderly Suthton.
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Requirements
+              </div>
+
+              <div class="info-value">
+                Granted to recognized contributors and members of the development team.
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Difficulty
+              </div>
+
+              <div class="difficulty">
+
+                <div class="difficulty-dots">
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                  <span class="dot active"></span>
+                </div>
+
+                Special
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
 
 
     </div>
@@ -1573,33 +1703,35 @@ body {
 
     <!-- =========================
          BOTTOM WIKI INFORMATION
-    ========================= -->
+         ========================= -->
 
     <div class="wiki-note">
 
-        <strong>Achievement Information</strong>
-        <br>
+      <strong>Achievement Information</strong>
+      <br>
 
-        Achievement requirements and availability may change as
-        Disorderly Suthton receives updates. This page documents
-        the current known requirements and classifications.
+      Achievement requirements and availability may change as
+      Disorderly Suthton receives updates. This page documents
+      the current known requirements and classifications.
 
     </div>
 
-</div>
+
+  </main>
 
 
-<!-- =========================
-     DISCORD
-========================= -->
+  <!-- =========================
+       DISCORD
+       ========================= -->
 
-<a
+  <a
+    class="discord"
     href="https://discord.gg/mzND9ZchJR"
     target="_blank"
-    class="discord-button"
->
+    rel="noopener noreferrer"
+  >
     DISCORD
-</a>
+  </a>
 
 
 </body>
